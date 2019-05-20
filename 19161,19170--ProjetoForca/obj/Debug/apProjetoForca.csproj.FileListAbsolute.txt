@@ -1,0 +1,29 @@
+C:\Users\Gabripol\Desktop\CTC\TP\excs programinhas\Projeto 2\19161,19170--ProjetoForca\19161,19170--ProjetoForca\bin\Debug\19161,19170--ProjetoForca.exe.config
+C:\Users\Gabripol\Desktop\CTC\TP\excs programinhas\Projeto 2\19161,19170--ProjetoForca\19161,19170--ProjetoForca\bin\Debug\19161,19170--ProjetoForca.exe
+C:\Users\Gabripol\Desktop\CTC\TP\excs programinhas\Projeto 2\19161,19170--ProjetoForca\19161,19170--ProjetoForca\bin\Debug\19161,19170--ProjetoForca.pdb
+C:\Users\Gabripol\Desktop\CTC\TP\excs programinhas\Projeto 2\19161,19170--ProjetoForca\19161,19170--ProjetoForca\obj\Debug\apProjetoForca.csprojAssemblyReference.cache
+C:\Users\Gabripol\Desktop\CTC\TP\excs programinhas\Projeto 2\19161,19170--ProjetoForca\19161,19170--ProjetoForca\obj\Debug\_19161_19170__ProjetoForca.Forca.resources
+C:\Users\Gabripol\Desktop\CTC\TP\excs programinhas\Projeto 2\19161,19170--ProjetoForca\19161,19170--ProjetoForca\obj\Debug\_19161_19170__ProjetoForca.Properties.Resources.resources
+C:\Users\Gabripol\Desktop\CTC\TP\excs programinhas\Projeto 2\19161,19170--ProjetoForca\19161,19170--ProjetoForca\obj\Debug\apProjetoForca.csproj.GenerateResource.cache
+C:\Users\Gabripol\Desktop\CTC\TP\excs programinhas\Projeto 2\19161,19170--ProjetoForca\19161,19170--ProjetoForca\obj\Debug\apProjetoForca.csproj.CoreCompileInputs.cache
+C:\Users\Gabripol\Desktop\CTC\TP\excs programinhas\Projeto 2\19161,19170--ProjetoForca\19161,19170--ProjetoForca\obj\Debug\19161,19170--ProjetoForca.exe
+C:\Users\Gabripol\Desktop\CTC\TP\excs programinhas\Projeto 2\19161,19170--ProjetoForca\19161,19170--ProjetoForca\obj\Debug\19161,19170--ProjetoForca.pdb
+C:\Users\Gabripol\Desktop\CTC\TP\excs programinhas\Projeto 2\19161 19170 - Projeto Forca\19161,19170--ProjetoForca\bin\Debug\19161,19170--ProjetoForca.exe.config
+C:\Users\Gabripol\Desktop\CTC\TP\excs programinhas\Projeto 2\19161 19170 - Projeto Forca\19161,19170--ProjetoForca\bin\Debug\19161,19170--ProjetoForca.exe
+C:\Users\Gabripol\Desktop\CTC\TP\excs programinhas\Projeto 2\19161 19170 - Projeto Forca\19161,19170--ProjetoForca\bin\Debug\19161,19170--ProjetoForca.pdb
+C:\Users\Gabripol\Desktop\CTC\TP\excs programinhas\Projeto 2\19161 19170 - Projeto Forca\19161,19170--ProjetoForca\obj\Debug\apProjetoForca.csprojAssemblyReference.cache
+C:\Users\Gabripol\Desktop\CTC\TP\excs programinhas\Projeto 2\19161 19170 - Projeto Forca\19161,19170--ProjetoForca\obj\Debug\_19161_19170__ProjetoForca.Forca.resources
+C:\Users\Gabripol\Desktop\CTC\TP\excs programinhas\Projeto 2\19161 19170 - Projeto Forca\19161,19170--ProjetoForca\obj\Debug\_19161_19170__ProjetoForca.Properties.Resources.resources
+C:\Users\Gabripol\Desktop\CTC\TP\excs programinhas\Projeto 2\19161 19170 - Projeto Forca\19161,19170--ProjetoForca\obj\Debug\apProjetoForca.csproj.GenerateResource.cache
+C:\Users\Gabripol\Desktop\CTC\TP\excs programinhas\Projeto 2\19161 19170 - Projeto Forca\19161,19170--ProjetoForca\obj\Debug\apProjetoForca.csproj.CoreCompileInputs.cache
+C:\Users\Gabripol\Desktop\CTC\TP\excs programinhas\Projeto 2\19161 19170 - Projeto Forca\19161,19170--ProjetoForca\obj\Debug\19161,19170--ProjetoForca.exe
+C:\Users\Gabripol\Desktop\CTC\TP\excs programinhas\Projeto 2\19161 19170 - Projeto Forca\19161,19170--ProjetoForca\obj\Debug\19161,19170--ProjetoForca.pdb
+C:\Users\u19170\Desktop\19161 19170 - Projeto Forca\19161,19170--ProjetoForca\bin\Debug\19161,19170--ProjetoForca.exe.config
+C:\Users\u19170\Desktop\19161 19170 - Projeto Forca\19161,19170--ProjetoForca\bin\Debug\19161,19170--ProjetoForca.exe
+C:\Users\u19170\Desktop\19161 19170 - Projeto Forca\19161,19170--ProjetoForca\bin\Debug\19161,19170--ProjetoForca.pdb
+C:\Users\u19170\Desktop\19161 19170 - Projeto Forca\19161,19170--ProjetoForca\obj\Debug\_19161_19170__ProjetoForca.Forca.resources
+C:\Users\u19170\Desktop\19161 19170 - Projeto Forca\19161,19170--ProjetoForca\obj\Debug\_19161_19170__ProjetoForca.Properties.Resources.resources
+C:\Users\u19170\Desktop\19161 19170 - Projeto Forca\19161,19170--ProjetoForca\obj\Debug\apProjetoForca.csproj.GenerateResource.Cache
+C:\Users\u19170\Desktop\19161 19170 - Projeto Forca\19161,19170--ProjetoForca\obj\Debug\apProjetoForca.csproj.CoreCompileInputs.cache
+C:\Users\u19170\Desktop\19161 19170 - Projeto Forca\19161,19170--ProjetoForca\obj\Debug\19161,19170--ProjetoForca.exe
+C:\Users\u19170\Desktop\19161 19170 - Projeto Forca\19161,19170--ProjetoForca\obj\Debug\19161,19170--ProjetoForca.pdb
