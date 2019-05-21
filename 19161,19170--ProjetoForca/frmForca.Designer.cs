@@ -40,10 +40,6 @@
             this.lbDica = new System.Windows.Forms.Label();
             this.lbPontos = new System.Windows.Forms.Label();
             this.lbErros = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.tmrTempo = new System.Windows.Forms.Timer(this.components);
             this.lbTempo = new System.Windows.Forms.Label();
             this.btnA = new System.Windows.Forms.Button();
@@ -85,9 +81,6 @@
             this.btnESPACO = new System.Windows.Forms.Button();
             this.btnHIFEN = new System.Windows.Forms.Button();
             this.btnUAGUD = new System.Windows.Forms.Button();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.dgvPalavra = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -104,43 +97,61 @@
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.picErro1 = new System.Windows.Forms.PictureBox();
-            this.picErro2 = new System.Windows.Forms.PictureBox();
-            this.picErro3 = new System.Windows.Forms.PictureBox();
-            this.picErro4 = new System.Windows.Forms.PictureBox();
-            this.picErro5 = new System.Windows.Forms.PictureBox();
-            this.picErro6 = new System.Windows.Forms.PictureBox();
-            this.picErro7 = new System.Windows.Forms.PictureBox();
-            this.picErro8 = new System.Windows.Forms.PictureBox();
-            this.picAuxErro1 = new System.Windows.Forms.PictureBox();
-            this.gifMorto = new System.Windows.Forms.PictureBox();
-            this.picGanhou = new System.Windows.Forms.PictureBox();
-            this.picGanhou2 = new System.Windows.Forms.PictureBox();
             this.panelTeclado = new System.Windows.Forms.Panel();
+            this.ssJogo = new System.Windows.Forms.StatusStrip();
+            this.lbData = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lbHorario = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lbSite = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tmrAgora = new System.Windows.Forms.Timer(this.components);
+            this.tbForca = new System.Windows.Forms.TabPage();
+            this.picErro8 = new System.Windows.Forms.PictureBox();
             this.pictureBox0 = new System.Windows.Forms.PictureBox();
+            this.picGanhou = new System.Windows.Forms.PictureBox();
+            this.picErro7 = new System.Windows.Forms.PictureBox();
+            this.picErro6 = new System.Windows.Forms.PictureBox();
+            this.picErro3 = new System.Windows.Forms.PictureBox();
+            this.picErro5 = new System.Windows.Forms.PictureBox();
+            this.picErro4 = new System.Windows.Forms.PictureBox();
+            this.picErro2 = new System.Windows.Forms.PictureBox();
+            this.picAuxErro1 = new System.Windows.Forms.PictureBox();
+            this.picErro1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.picGanhou2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.gifMorto = new System.Windows.Forms.PictureBox();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tbCadastro = new System.Windows.Forms.TabPage();
             lbqualNome = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPalavra)).BeginInit();
+            this.panelTeclado.SuspendLayout();
+            this.ssJogo.SuspendLayout();
+            this.tbForca.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picErro8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox0)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picGanhou)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picErro7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picErro6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picErro3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picErro5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picErro4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picErro2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAuxErro1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picErro1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPalavra)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picErro1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picErro2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picErro3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picErro4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picErro5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picErro6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picErro7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picErro8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picAuxErro1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gifMorto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picGanhou)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picGanhou2)).BeginInit();
-            this.panelTeclado.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox0)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gifMorto)).BeginInit();
+            this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbqualNome
@@ -148,7 +159,7 @@
             lbqualNome.AutoSize = true;
             lbqualNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             lbqualNome.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            lbqualNome.Location = new System.Drawing.Point(557, 153);
+            lbqualNome.Location = new System.Drawing.Point(576, 181);
             lbqualNome.Name = "lbqualNome";
             lbqualNome.Size = new System.Drawing.Size(97, 20);
             lbqualNome.TabIndex = 2;
@@ -164,7 +175,7 @@
             this.lbForca.AutoSize = true;
             this.lbForca.Font = new System.Drawing.Font("Curlz MT", 70F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbForca.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lbForca.Location = new System.Drawing.Point(582, -15);
+            this.lbForca.Location = new System.Drawing.Point(601, 13);
             this.lbForca.Name = "lbForca";
             this.lbForca.Size = new System.Drawing.Size(268, 125);
             this.lbForca.TabIndex = 0;
@@ -175,7 +186,7 @@
             this.lbAdivinhe.AutoSize = true;
             this.lbAdivinhe.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAdivinhe.ForeColor = System.Drawing.Color.CadetBlue;
-            this.lbAdivinhe.Location = new System.Drawing.Point(629, 96);
+            this.lbAdivinhe.Location = new System.Drawing.Point(648, 124);
             this.lbAdivinhe.Name = "lbAdivinhe";
             this.lbAdivinhe.Size = new System.Drawing.Size(173, 26);
             this.lbAdivinhe.TabIndex = 1;
@@ -183,14 +194,14 @@
             // 
             // txtSeuNome
             // 
-            this.txtSeuNome.Location = new System.Drawing.Point(660, 153);
+            this.txtSeuNome.Location = new System.Drawing.Point(679, 181);
             this.txtSeuNome.Name = "txtSeuNome";
             this.txtSeuNome.Size = new System.Drawing.Size(169, 20);
             this.txtSeuNome.TabIndex = 3;
             // 
             // btnIniciar
             // 
-            this.btnIniciar.Location = new System.Drawing.Point(731, 417);
+            this.btnIniciar.Location = new System.Drawing.Point(750, 445);
             this.btnIniciar.Name = "btnIniciar";
             this.btnIniciar.Size = new System.Drawing.Size(95, 33);
             this.btnIniciar.TabIndex = 4;
@@ -202,7 +213,7 @@
             // 
             this.chkComDica.AutoSize = true;
             this.chkComDica.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkComDica.Location = new System.Drawing.Point(834, 429);
+            this.chkComDica.Location = new System.Drawing.Point(853, 457);
             this.chkComDica.Name = "chkComDica";
             this.chkComDica.Size = new System.Drawing.Size(85, 21);
             this.chkComDica.TabIndex = 5;
@@ -214,7 +225,7 @@
             this.lbDica.AutoSize = true;
             this.lbDica.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDica.ForeColor = System.Drawing.Color.Purple;
-            this.lbDica.Location = new System.Drawing.Point(486, 386);
+            this.lbDica.Location = new System.Drawing.Point(505, 414);
             this.lbDica.Name = "lbDica";
             this.lbDica.Size = new System.Drawing.Size(290, 23);
             this.lbDica.TabIndex = 6;
@@ -225,7 +236,7 @@
             this.lbPontos.AutoSize = true;
             this.lbPontos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPontos.ForeColor = System.Drawing.Color.Red;
-            this.lbPontos.Location = new System.Drawing.Point(486, 417);
+            this.lbPontos.Location = new System.Drawing.Point(505, 445);
             this.lbPontos.Name = "lbPontos";
             this.lbPontos.Size = new System.Drawing.Size(110, 20);
             this.lbPontos.TabIndex = 7;
@@ -236,47 +247,12 @@
             this.lbErros.AutoSize = true;
             this.lbErros.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbErros.ForeColor = System.Drawing.Color.Red;
-            this.lbErros.Location = new System.Drawing.Point(486, 452);
+            this.lbErros.Location = new System.Drawing.Point(505, 480);
             this.lbErros.Name = "lbErros";
             this.lbErros.Size = new System.Drawing.Size(119, 20);
             this.lbErros.TabIndex = 8;
             this.lbErros.Text = "Erros(8):____";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(33, 27);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(128, 50);
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.Location = new System.Drawing.Point(158, 27);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(103, 50);
-            this.pictureBox2.TabIndex = 10;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(33, 72);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(79, 192);
-            this.pictureBox3.TabIndex = 11;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
-            this.pictureBox4.Location = new System.Drawing.Point(33, 259);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(79, 192);
-            this.pictureBox4.TabIndex = 12;
-            this.pictureBox4.TabStop = false;
+            this.lbErros.Click += new System.EventHandler(this.lbErros_Click);
             // 
             // tmrTempo
             // 
@@ -288,7 +264,7 @@
             this.lbTempo.AutoSize = true;
             this.lbTempo.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTempo.ForeColor = System.Drawing.Color.Red;
-            this.lbTempo.Location = new System.Drawing.Point(708, 494);
+            this.lbTempo.Location = new System.Drawing.Point(724, 483);
             this.lbTempo.Name = "lbTempo";
             this.lbTempo.Size = new System.Drawing.Size(214, 27);
             this.lbTempo.TabIndex = 13;
@@ -724,33 +700,6 @@
             this.btnUAGUD.UseVisualStyleBackColor = false;
             this.btnUAGUD.Click += new System.EventHandler(this.btnClick);
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
-            this.pictureBox5.Location = new System.Drawing.Point(148, 72);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(86, 101);
-            this.pictureBox5.TabIndex = 53;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.BackgroundImage")));
-            this.pictureBox6.Location = new System.Drawing.Point(158, 164);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(76, 11);
-            this.pictureBox6.TabIndex = 54;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox7.BackgroundImage")));
-            this.pictureBox7.Location = new System.Drawing.Point(158, 175);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(76, 21);
-            this.pictureBox7.TabIndex = 55;
-            this.pictureBox7.TabStop = false;
-            // 
             // dgvPalavra
             // 
             this.dgvPalavra.AllowUserToResizeColumns = false;
@@ -779,7 +728,7 @@
             this.Column13,
             this.Column14,
             this.Column15});
-            this.dgvPalavra.Location = new System.Drawing.Point(558, 311);
+            this.dgvPalavra.Location = new System.Drawing.Point(577, 339);
             this.dgvPalavra.Name = "dgvPalavra";
             this.dgvPalavra.ReadOnly = true;
             this.dgvPalavra.RowHeadersVisible = false;
@@ -908,126 +857,6 @@
             this.Column15.ReadOnly = true;
             this.Column15.Width = 21;
             // 
-            // picErro1
-            // 
-            this.picErro1.Image = ((System.Drawing.Image)(resources.GetObject("picErro1.Image")));
-            this.picErro1.Location = new System.Drawing.Point(148, 134);
-            this.picErro1.Name = "picErro1";
-            this.picErro1.Size = new System.Drawing.Size(98, 93);
-            this.picErro1.TabIndex = 57;
-            this.picErro1.TabStop = false;
-            this.picErro1.Visible = false;
-            // 
-            // picErro2
-            // 
-            this.picErro2.Image = ((System.Drawing.Image)(resources.GetObject("picErro2.Image")));
-            this.picErro2.Location = new System.Drawing.Point(157, 233);
-            this.picErro2.Name = "picErro2";
-            this.picErro2.Size = new System.Drawing.Size(68, 83);
-            this.picErro2.TabIndex = 58;
-            this.picErro2.TabStop = false;
-            this.picErro2.Visible = false;
-            // 
-            // picErro3
-            // 
-            this.picErro3.Image = ((System.Drawing.Image)(resources.GetObject("picErro3.Image")));
-            this.picErro3.Location = new System.Drawing.Point(158, 311);
-            this.picErro3.Name = "picErro3";
-            this.picErro3.Size = new System.Drawing.Size(70, 49);
-            this.picErro3.TabIndex = 59;
-            this.picErro3.TabStop = false;
-            this.picErro3.Visible = false;
-            // 
-            // picErro4
-            // 
-            this.picErro4.Image = ((System.Drawing.Image)(resources.GetObject("picErro4.Image")));
-            this.picErro4.Location = new System.Drawing.Point(220, 233);
-            this.picErro4.Name = "picErro4";
-            this.picErro4.Size = new System.Drawing.Size(68, 61);
-            this.picErro4.TabIndex = 60;
-            this.picErro4.TabStop = false;
-            this.picErro4.Visible = false;
-            // 
-            // picErro5
-            // 
-            this.picErro5.Image = ((System.Drawing.Image)(resources.GetObject("picErro5.Image")));
-            this.picErro5.Location = new System.Drawing.Point(118, 219);
-            this.picErro5.Name = "picErro5";
-            this.picErro5.Size = new System.Drawing.Size(58, 37);
-            this.picErro5.TabIndex = 61;
-            this.picErro5.TabStop = false;
-            this.picErro5.Visible = false;
-            // 
-            // picErro6
-            // 
-            this.picErro6.Image = ((System.Drawing.Image)(resources.GetObject("picErro6.Image")));
-            this.picErro6.Location = new System.Drawing.Point(192, 358);
-            this.picErro6.Name = "picErro6";
-            this.picErro6.Size = new System.Drawing.Size(60, 93);
-            this.picErro6.TabIndex = 62;
-            this.picErro6.TabStop = false;
-            this.picErro6.Visible = false;
-            // 
-            // picErro7
-            // 
-            this.picErro7.Image = ((System.Drawing.Image)(resources.GetObject("picErro7.Image")));
-            this.picErro7.Location = new System.Drawing.Point(118, 353);
-            this.picErro7.Name = "picErro7";
-            this.picErro7.Size = new System.Drawing.Size(68, 93);
-            this.picErro7.TabIndex = 63;
-            this.picErro7.TabStop = false;
-            this.picErro7.Visible = false;
-            // 
-            // picErro8
-            // 
-            this.picErro8.Image = ((System.Drawing.Image)(resources.GetObject("picErro8.Image")));
-            this.picErro8.Location = new System.Drawing.Point(152, 133);
-            this.picErro8.Name = "picErro8";
-            this.picErro8.Size = new System.Drawing.Size(113, 93);
-            this.picErro8.TabIndex = 64;
-            this.picErro8.TabStop = false;
-            this.picErro8.Visible = false;
-            // 
-            // picAuxErro1
-            // 
-            this.picAuxErro1.Image = ((System.Drawing.Image)(resources.GetObject("picAuxErro1.Image")));
-            this.picAuxErro1.Location = new System.Drawing.Point(158, 220);
-            this.picAuxErro1.Name = "picAuxErro1";
-            this.picAuxErro1.Size = new System.Drawing.Size(88, 18);
-            this.picAuxErro1.TabIndex = 65;
-            this.picAuxErro1.TabStop = false;
-            this.picAuxErro1.Visible = false;
-            // 
-            // gifMorto
-            // 
-            this.gifMorto.Image = ((System.Drawing.Image)(resources.GetObject("gifMorto.Image")));
-            this.gifMorto.Location = new System.Drawing.Point(306, 42);
-            this.gifMorto.Name = "gifMorto";
-            this.gifMorto.Size = new System.Drawing.Size(160, 345);
-            this.gifMorto.TabIndex = 66;
-            this.gifMorto.TabStop = false;
-            this.gifMorto.Visible = false;
-            // 
-            // picGanhou
-            // 
-            this.picGanhou.Image = ((System.Drawing.Image)(resources.GetObject("picGanhou.Image")));
-            this.picGanhou.Location = new System.Drawing.Point(118, 153);
-            this.picGanhou.Name = "picGanhou";
-            this.picGanhou.Size = new System.Drawing.Size(28, 100);
-            this.picGanhou.TabIndex = 67;
-            this.picGanhou.TabStop = false;
-            this.picGanhou.Visible = false;
-            // 
-            // picGanhou2
-            // 
-            this.picGanhou2.Image = ((System.Drawing.Image)(resources.GetObject("picGanhou2.Image")));
-            this.picGanhou2.Location = new System.Drawing.Point(68, 153);
-            this.picGanhou2.Name = "picGanhou2";
-            this.picGanhou2.Size = new System.Drawing.Size(58, 100);
-            this.picGanhou2.TabIndex = 68;
-            this.picGanhou2.TabStop = false;
-            this.picGanhou2.Visible = false;
-            // 
             // panelTeclado
             // 
             this.panelTeclado.Controls.Add(this.btnZ);
@@ -1070,85 +899,343 @@
             this.panelTeclado.Controls.Add(this.btnACIRC);
             this.panelTeclado.Controls.Add(this.btnATIO);
             this.panelTeclado.Enabled = false;
-            this.panelTeclado.Location = new System.Drawing.Point(561, 191);
+            this.panelTeclado.Location = new System.Drawing.Point(580, 219);
             this.panelTeclado.Name = "panelTeclado";
             this.panelTeclado.Size = new System.Drawing.Size(316, 103);
             this.panelTeclado.TabIndex = 69;
             // 
+            // ssJogo
+            // 
+            this.ssJogo.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lbData,
+            this.lbHorario,
+            this.lbSite});
+            this.ssJogo.Location = new System.Drawing.Point(0, 553);
+            this.ssJogo.Name = "ssJogo";
+            this.ssJogo.Size = new System.Drawing.Size(975, 22);
+            this.ssJogo.TabIndex = 71;
+            this.ssJogo.Text = "statusStrip1";
+            // 
+            // lbData
+            // 
+            this.lbData.Name = "lbData";
+            this.lbData.Size = new System.Drawing.Size(301, 17);
+            this.lbData.Spring = true;
+            this.lbData.Text = "Data:";
+            this.lbData.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbHorario
+            // 
+            this.lbHorario.Name = "lbHorario";
+            this.lbHorario.Size = new System.Drawing.Size(301, 17);
+            this.lbHorario.Spring = true;
+            this.lbHorario.Text = "Horário:";
+            this.lbHorario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbSite
+            // 
+            this.lbSite.Name = "lbSite";
+            this.lbSite.Size = new System.Drawing.Size(357, 17);
+            this.lbSite.Text = "Inspirado em:  http://www.velhosamigos.com.br/jogos/Forca.htm";
+            // 
+            // tmrAgora
+            // 
+            this.tmrAgora.Tick += new System.EventHandler(this.tmrAgora_Tick);
+            // 
+            // tbForca
+            // 
+            this.tbForca.Controls.Add(this.pictureBox0);
+            this.tbForca.Controls.Add(this.picErro8);
+            this.tbForca.Controls.Add(this.picErro7);
+            this.tbForca.Controls.Add(this.picErro6);
+            this.tbForca.Controls.Add(this.picErro3);
+            this.tbForca.Controls.Add(this.picErro5);
+            this.tbForca.Controls.Add(this.picErro4);
+            this.tbForca.Controls.Add(this.picErro2);
+            this.tbForca.Controls.Add(this.picAuxErro1);
+            this.tbForca.Controls.Add(this.picErro1);
+            this.tbForca.Controls.Add(this.pictureBox7);
+            this.tbForca.Controls.Add(this.pictureBox6);
+            this.tbForca.Controls.Add(this.pictureBox5);
+            this.tbForca.Controls.Add(this.pictureBox2);
+            this.tbForca.Controls.Add(this.panelTeclado);
+            this.tbForca.Controls.Add(this.picGanhou);
+            this.tbForca.Controls.Add(this.dgvPalavra);
+            this.tbForca.Controls.Add(this.lbTempo);
+            this.tbForca.Controls.Add(this.lbErros);
+            this.tbForca.Controls.Add(this.lbPontos);
+            this.tbForca.Controls.Add(this.lbDica);
+            this.tbForca.Controls.Add(this.chkComDica);
+            this.tbForca.Controls.Add(this.btnIniciar);
+            this.tbForca.Controls.Add(this.txtSeuNome);
+            this.tbForca.Controls.Add(lbqualNome);
+            this.tbForca.Controls.Add(this.pictureBox3);
+            this.tbForca.Controls.Add(this.lbAdivinhe);
+            this.tbForca.Controls.Add(this.pictureBox1);
+            this.tbForca.Controls.Add(this.lbForca);
+            this.tbForca.Controls.Add(this.pictureBox4);
+            this.tbForca.Controls.Add(this.picGanhou2);
+            this.tbForca.Controls.Add(this.gifMorto);
+            this.tbForca.Location = new System.Drawing.Point(4, 22);
+            this.tbForca.Name = "tbForca";
+            this.tbForca.Padding = new System.Windows.Forms.Padding(3);
+            this.tbForca.Size = new System.Drawing.Size(955, 522);
+            this.tbForca.TabIndex = 0;
+            this.tbForca.Text = "Forca";
+            this.tbForca.UseVisualStyleBackColor = true;
+            // 
+            // picErro8
+            // 
+            this.picErro8.Image = ((System.Drawing.Image)(resources.GetObject("picErro8.Image")));
+            this.picErro8.Location = new System.Drawing.Point(156, 114);
+            this.picErro8.Name = "picErro8";
+            this.picErro8.Size = new System.Drawing.Size(113, 93);
+            this.picErro8.TabIndex = 64;
+            this.picErro8.TabStop = false;
+            this.picErro8.Visible = false;
+            // 
             // pictureBox0
             // 
             this.pictureBox0.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox0.Image")));
-            this.pictureBox0.Location = new System.Drawing.Point(-1, 452);
+            this.pictureBox0.Location = new System.Drawing.Point(3, 425);
             this.pictureBox0.Name = "pictureBox0";
-            this.pictureBox0.Size = new System.Drawing.Size(436, 83);
+            this.pictureBox0.Size = new System.Drawing.Size(428, 85);
             this.pictureBox0.TabIndex = 70;
             this.pictureBox0.TabStop = false;
+            // 
+            // picGanhou
+            // 
+            this.picGanhou.Image = ((System.Drawing.Image)(resources.GetObject("picGanhou.Image")));
+            this.picGanhou.Location = new System.Drawing.Point(349, 102);
+            this.picGanhou.Name = "picGanhou";
+            this.picGanhou.Size = new System.Drawing.Size(34, 100);
+            this.picGanhou.TabIndex = 67;
+            this.picGanhou.TabStop = false;
+            this.picGanhou.Visible = false;
+            // 
+            // picErro7
+            // 
+            this.picErro7.Image = ((System.Drawing.Image)(resources.GetObject("picErro7.Image")));
+            this.picErro7.Location = new System.Drawing.Point(130, 332);
+            this.picErro7.Name = "picErro7";
+            this.picErro7.Size = new System.Drawing.Size(68, 93);
+            this.picErro7.TabIndex = 63;
+            this.picErro7.TabStop = false;
+            this.picErro7.Visible = false;
+            // 
+            // picErro6
+            // 
+            this.picErro6.Image = ((System.Drawing.Image)(resources.GetObject("picErro6.Image")));
+            this.picErro6.Location = new System.Drawing.Point(200, 340);
+            this.picErro6.Name = "picErro6";
+            this.picErro6.Size = new System.Drawing.Size(60, 93);
+            this.picErro6.TabIndex = 62;
+            this.picErro6.TabStop = false;
+            this.picErro6.Visible = false;
+            // 
+            // picErro3
+            // 
+            this.picErro3.Image = ((System.Drawing.Image)(resources.GetObject("picErro3.Image")));
+            this.picErro3.Location = new System.Drawing.Point(166, 291);
+            this.picErro3.Name = "picErro3";
+            this.picErro3.Size = new System.Drawing.Size(70, 49);
+            this.picErro3.TabIndex = 59;
+            this.picErro3.TabStop = false;
+            this.picErro3.Visible = false;
+            // 
+            // picErro5
+            // 
+            this.picErro5.Image = ((System.Drawing.Image)(resources.GetObject("picErro5.Image")));
+            this.picErro5.Location = new System.Drawing.Point(114, 197);
+            this.picErro5.Name = "picErro5";
+            this.picErro5.Size = new System.Drawing.Size(58, 37);
+            this.picErro5.TabIndex = 61;
+            this.picErro5.TabStop = false;
+            this.picErro5.Visible = false;
+            // 
+            // picErro4
+            // 
+            this.picErro4.Image = ((System.Drawing.Image)(resources.GetObject("picErro4.Image")));
+            this.picErro4.Location = new System.Drawing.Point(226, 212);
+            this.picErro4.Name = "picErro4";
+            this.picErro4.Size = new System.Drawing.Size(68, 61);
+            this.picErro4.TabIndex = 60;
+            this.picErro4.TabStop = false;
+            this.picErro4.Visible = false;
+            // 
+            // picErro2
+            // 
+            this.picErro2.Image = ((System.Drawing.Image)(resources.GetObject("picErro2.Image")));
+            this.picErro2.Location = new System.Drawing.Point(167, 213);
+            this.picErro2.Name = "picErro2";
+            this.picErro2.Size = new System.Drawing.Size(68, 83);
+            this.picErro2.TabIndex = 58;
+            this.picErro2.TabStop = false;
+            this.picErro2.Visible = false;
+            // 
+            // picAuxErro1
+            // 
+            this.picAuxErro1.Image = ((System.Drawing.Image)(resources.GetObject("picAuxErro1.Image")));
+            this.picAuxErro1.Location = new System.Drawing.Point(166, 199);
+            this.picAuxErro1.Name = "picAuxErro1";
+            this.picAuxErro1.Size = new System.Drawing.Size(88, 18);
+            this.picAuxErro1.TabIndex = 65;
+            this.picAuxErro1.TabStop = false;
+            this.picAuxErro1.Visible = false;
+            // 
+            // picErro1
+            // 
+            this.picErro1.Image = ((System.Drawing.Image)(resources.GetObject("picErro1.Image")));
+            this.picErro1.Location = new System.Drawing.Point(156, 113);
+            this.picErro1.Name = "picErro1";
+            this.picErro1.Size = new System.Drawing.Size(98, 93);
+            this.picErro1.TabIndex = 57;
+            this.picErro1.TabStop = false;
+            this.picErro1.Visible = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(41, 42);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(79, 192);
+            this.pictureBox3.TabIndex = 11;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(41, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(128, 50);
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.Location = new System.Drawing.Point(166, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(103, 50);
+            this.pictureBox2.TabIndex = 10;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox7.BackgroundImage")));
+            this.pictureBox7.Location = new System.Drawing.Point(166, 154);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(76, 21);
+            this.pictureBox7.TabIndex = 55;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
+            this.pictureBox4.Location = new System.Drawing.Point(41, 232);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(79, 192);
+            this.pictureBox4.TabIndex = 12;
+            this.pictureBox4.TabStop = false;
+            // 
+            // picGanhou2
+            // 
+            this.picGanhou2.Image = ((System.Drawing.Image)(resources.GetObject("picGanhou2.Image")));
+            this.picGanhou2.Location = new System.Drawing.Point(288, 102);
+            this.picGanhou2.Name = "picGanhou2";
+            this.picGanhou2.Size = new System.Drawing.Size(64, 100);
+            this.picGanhou2.TabIndex = 68;
+            this.picGanhou2.TabStop = false;
+            this.picGanhou2.Visible = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(166, 138);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(76, 35);
+            this.pictureBox6.TabIndex = 54;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(156, 45);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(86, 93);
+            this.pictureBox5.TabIndex = 53;
+            this.pictureBox5.TabStop = false;
+            // 
+            // gifMorto
+            // 
+            this.gifMorto.Image = ((System.Drawing.Image)(resources.GetObject("gifMorto.Image")));
+            this.gifMorto.Location = new System.Drawing.Point(400, 13);
+            this.gifMorto.Name = "gifMorto";
+            this.gifMorto.Size = new System.Drawing.Size(170, 345);
+            this.gifMorto.TabIndex = 66;
+            this.gifMorto.TabStop = false;
+            this.gifMorto.Visible = false;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tbForca);
+            this.tabControl1.Controls.Add(this.tbCadastro);
+            this.tabControl1.Location = new System.Drawing.Point(0, 2);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(963, 548);
+            this.tabControl1.TabIndex = 72;
+            // 
+            // tbCadastro
+            // 
+            this.tbCadastro.Location = new System.Drawing.Point(4, 22);
+            this.tbCadastro.Name = "tbCadastro";
+            this.tbCadastro.Padding = new System.Windows.Forms.Padding(3);
+            this.tbCadastro.Size = new System.Drawing.Size(955, 522);
+            this.tbCadastro.TabIndex = 1;
+            this.tbCadastro.Text = "Cadastro";
+            this.tbCadastro.UseVisualStyleBackColor = true;
             // 
             // Forca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(944, 531);
-            this.Controls.Add(this.pictureBox0);
-            this.Controls.Add(this.panelTeclado);
-            this.Controls.Add(this.picGanhou2);
-            this.Controls.Add(this.picGanhou);
-            this.Controls.Add(this.gifMorto);
-            this.Controls.Add(this.picAuxErro1);
-            this.Controls.Add(this.picErro8);
-            this.Controls.Add(this.picErro7);
-            this.Controls.Add(this.picErro6);
-            this.Controls.Add(this.picErro5);
-            this.Controls.Add(this.picErro4);
-            this.Controls.Add(this.picErro3);
-            this.Controls.Add(this.picErro2);
-            this.Controls.Add(this.picErro1);
-            this.Controls.Add(this.dgvPalavra);
-            this.Controls.Add(this.pictureBox7);
-            this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.lbTempo);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.lbErros);
-            this.Controls.Add(this.lbPontos);
-            this.Controls.Add(this.lbDica);
-            this.Controls.Add(this.chkComDica);
-            this.Controls.Add(this.btnIniciar);
-            this.Controls.Add(this.txtSeuNome);
-            this.Controls.Add(lbqualNome);
-            this.Controls.Add(this.lbAdivinhe);
-            this.Controls.Add(this.lbForca);
-            this.MaximumSize = new System.Drawing.Size(960, 569);
+            this.ClientSize = new System.Drawing.Size(975, 575);
+            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.ssJogo);
+            this.MaximumSize = new System.Drawing.Size(1000, 650);
             this.MinimumSize = new System.Drawing.Size(960, 569);
             this.Name = "Forca";
             this.Text = "Jogo da forca";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Click += new System.EventHandler(this.btnClick);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPalavra)).EndInit();
+            this.panelTeclado.ResumeLayout(false);
+            this.ssJogo.ResumeLayout(false);
+            this.ssJogo.PerformLayout();
+            this.tbForca.ResumeLayout(false);
+            this.tbForca.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picErro8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox0)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picGanhou)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picErro7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picErro6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picErro3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picErro5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picErro4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picErro2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAuxErro1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picErro1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPalavra)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picErro1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picErro2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picErro3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picErro4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picErro5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picErro6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picErro7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picErro8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picAuxErro1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gifMorto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picGanhou)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picGanhou2)).EndInit();
-            this.panelTeclado.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox0)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gifMorto)).EndInit();
+            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1165,10 +1252,6 @@
         private System.Windows.Forms.Label lbDica;
         private System.Windows.Forms.Label lbPontos;
         private System.Windows.Forms.Label lbErros;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Timer tmrTempo;
         private System.Windows.Forms.Label lbTempo;
         private System.Windows.Forms.Button btnA;
@@ -1210,22 +1293,7 @@
         private System.Windows.Forms.Button btnESPACO;
         private System.Windows.Forms.Button btnHIFEN;
         private System.Windows.Forms.Button btnUAGUD;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.DataGridView dgvPalavra;
-        private System.Windows.Forms.PictureBox picErro1;
-        private System.Windows.Forms.PictureBox picErro2;
-        private System.Windows.Forms.PictureBox picErro3;
-        private System.Windows.Forms.PictureBox picErro4;
-        private System.Windows.Forms.PictureBox picErro5;
-        private System.Windows.Forms.PictureBox picErro6;
-        private System.Windows.Forms.PictureBox picErro7;
-        private System.Windows.Forms.PictureBox picErro8;
-        private System.Windows.Forms.PictureBox picAuxErro1;
-        private System.Windows.Forms.PictureBox gifMorto;
-        private System.Windows.Forms.PictureBox picGanhou;
-        private System.Windows.Forms.PictureBox picGanhou2;
         private System.Windows.Forms.Panel panelTeclado;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -1242,7 +1310,34 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
+        private System.Windows.Forms.StatusStrip ssJogo;
+        private System.Windows.Forms.ToolStripStatusLabel lbData;
+        private System.Windows.Forms.ToolStripStatusLabel lbHorario;
+        private System.Windows.Forms.ToolStripStatusLabel lbSite;
+        private System.Windows.Forms.Timer tmrAgora;
+        private System.Windows.Forms.TabPage tbForca;
+        private System.Windows.Forms.PictureBox picErro8;
         private System.Windows.Forms.PictureBox pictureBox0;
+        private System.Windows.Forms.PictureBox picGanhou;
+        private System.Windows.Forms.PictureBox picErro7;
+        private System.Windows.Forms.PictureBox picErro6;
+        private System.Windows.Forms.PictureBox picErro3;
+        private System.Windows.Forms.PictureBox picErro5;
+        private System.Windows.Forms.PictureBox picErro4;
+        private System.Windows.Forms.PictureBox picErro2;
+        private System.Windows.Forms.PictureBox picAuxErro1;
+        private System.Windows.Forms.PictureBox picErro1;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox picGanhou2;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox gifMorto;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tbCadastro;
     }
 }
 

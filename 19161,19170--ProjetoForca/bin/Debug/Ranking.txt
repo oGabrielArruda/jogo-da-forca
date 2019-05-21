@@ -1,3 +1,4 @@
 Nome            Pontos
-gaga            5
-gaga            16
+gabriel         15
+gabriel         27
+nicolas         13

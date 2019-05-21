@@ -25,6 +25,7 @@ namespace _19161_19170__ProjetoForca
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            tmrAgora.Start(); // incia o timer do horário do dia
             dlgAbrir.Title = "Escolha o arquivo texto para o jogo"; // título do OpenFileDialog
             if (dlgAbrir.ShowDialog() == DialogResult.OK) // se abriu o arquivo
             {
@@ -391,6 +392,18 @@ namespace _19161_19170__ProjetoForca
             this.Refresh();  // atualizamos o form para exibir as imagens
             Application.DoEvents();
         }
+
+        private void tmrAgora_Tick(object sender, EventArgs e)
+        {
+            lbData.Text = "Data: " + DateTime.Now.ToLongDateString(); // Exibe o dia em que o usuário está jogando
+            lbHorario.Text = "Horário: " + DateTime.Now.ToString("hh:mm:ss"); // exibe o horário
+        }
+
+        private void lbErros_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
         void ImagensGanhou() //exibimos as imagens da vitória
         {
