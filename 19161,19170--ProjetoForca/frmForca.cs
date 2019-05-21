@@ -346,34 +346,6 @@ namespace _19161_19170__ProjetoForca
                     gifMorto.Visible = true;
                     break;
             }
-
-
-
-
-
-
-           /* if (nmrErro == 1)
-            {
-                picErro1.Visible = true;
-                picAuxErro1.Visible = true;
-            }
-            if (nmrErro == 2)
-                picErro2.Visible = true;
-            else if (nmrErro == 3)
-                picErro3.Visible = true;
-            else if(nmrErro == 4)
-                picErro4.Visible = true;
-            else if (nmrErro == 5)
-                picErro5.Visible = true;
-            else if (nmrErro == 6)
-                picErro6.Visible = true;
-            else if (nmrErro == 7)
-                picErro7.Visible = true;
-            else if (nmrErro == 8)
-            {
-                picErro8.Visible = true;
-                picMorreu.Visible = true;
-            }*/
         }
 
         void ImagensPerdeu() //exibimos as imagens da derrota
@@ -399,10 +371,7 @@ namespace _19161_19170__ProjetoForca
             lbHorario.Text = "Horário: " + DateTime.Now.ToString("hh:mm:ss"); // exibe o horário
         }
 
-        private void lbErros_Click(object sender, EventArgs e)
-        {
 
-        }
 
 
         void ImagensGanhou() //exibimos as imagens da vitória

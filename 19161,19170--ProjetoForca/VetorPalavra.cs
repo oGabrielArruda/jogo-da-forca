@@ -14,7 +14,7 @@ namespace _19161_19170__ProjetoForca
     {
         int tamanhoMaximo;  // tamanho físico do vetor dados
         int qtsDesafios;      // tamanho lógico do vetor dados
-        protected PalavraDica[] desafio;
+        private PalavraDica[] desafio;
          string[] vetorCaracteres = new string[15];
 
         public VetorPalavra(int tamanhoDesejado)

@@ -1,4 +1,4 @@
 Nome            Pontos
-gabriel         15
-gabriel         27
-nicolas         13
+gabriel         10
+angelao         5
+angelo          9

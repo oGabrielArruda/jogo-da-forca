@@ -1,4 +1,6 @@
-﻿namespace _19161_19170__ProjetoForca
+﻿// Gabriel Alves de Arruda 19170    
+// Angelo Gomes Pescarini 19161
+namespace _19161_19170__ProjetoForca
 {
     partial class Forca
     {
@@ -104,9 +106,8 @@
             this.lbSite = new System.Windows.Forms.ToolStripStatusLabel();
             this.tmrAgora = new System.Windows.Forms.Timer(this.components);
             this.tbForca = new System.Windows.Forms.TabPage();
-            this.picErro8 = new System.Windows.Forms.PictureBox();
             this.pictureBox0 = new System.Windows.Forms.PictureBox();
-            this.picGanhou = new System.Windows.Forms.PictureBox();
+            this.picErro8 = new System.Windows.Forms.PictureBox();
             this.picErro7 = new System.Windows.Forms.PictureBox();
             this.picErro6 = new System.Windows.Forms.PictureBox();
             this.picErro3 = new System.Windows.Forms.PictureBox();
@@ -115,14 +116,15 @@
             this.picErro2 = new System.Windows.Forms.PictureBox();
             this.picAuxErro1 = new System.Windows.Forms.PictureBox();
             this.picErro1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.picGanhou2 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.picGanhou = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.picGanhou2 = new System.Windows.Forms.PictureBox();
             this.gifMorto = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tbCadastro = new System.Windows.Forms.TabPage();
@@ -131,9 +133,8 @@
             this.panelTeclado.SuspendLayout();
             this.ssJogo.SuspendLayout();
             this.tbForca.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picErro8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox0)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picGanhou)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picErro8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picErro7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picErro6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picErro3)).BeginInit();
@@ -142,14 +143,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.picErro2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAuxErro1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picErro1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picGanhou2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picGanhou)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picGanhou2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gifMorto)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
@@ -252,7 +254,6 @@
             this.lbErros.Size = new System.Drawing.Size(119, 20);
             this.lbErros.TabIndex = 8;
             this.lbErros.Text = "Erros(8):____";
-            this.lbErros.Click += new System.EventHandler(this.lbErros_Click);
             // 
             // tmrTempo
             // 
@@ -944,6 +945,7 @@
             // 
             // tbForca
             // 
+            this.tbForca.BackColor = System.Drawing.SystemColors.Control;
             this.tbForca.Controls.Add(this.pictureBox0);
             this.tbForca.Controls.Add(this.picErro8);
             this.tbForca.Controls.Add(this.picErro7);
@@ -982,17 +984,6 @@
             this.tbForca.Size = new System.Drawing.Size(955, 522);
             this.tbForca.TabIndex = 0;
             this.tbForca.Text = "Forca";
-            this.tbForca.UseVisualStyleBackColor = true;
-            // 
-            // picErro8
-            // 
-            this.picErro8.Image = ((System.Drawing.Image)(resources.GetObject("picErro8.Image")));
-            this.picErro8.Location = new System.Drawing.Point(156, 114);
-            this.picErro8.Name = "picErro8";
-            this.picErro8.Size = new System.Drawing.Size(113, 93);
-            this.picErro8.TabIndex = 64;
-            this.picErro8.TabStop = false;
-            this.picErro8.Visible = false;
             // 
             // pictureBox0
             // 
@@ -1003,15 +994,15 @@
             this.pictureBox0.TabIndex = 70;
             this.pictureBox0.TabStop = false;
             // 
-            // picGanhou
+            // picErro8
             // 
-            this.picGanhou.Image = ((System.Drawing.Image)(resources.GetObject("picGanhou.Image")));
-            this.picGanhou.Location = new System.Drawing.Point(349, 102);
-            this.picGanhou.Name = "picGanhou";
-            this.picGanhou.Size = new System.Drawing.Size(34, 100);
-            this.picGanhou.TabIndex = 67;
-            this.picGanhou.TabStop = false;
-            this.picGanhou.Visible = false;
+            this.picErro8.Image = ((System.Drawing.Image)(resources.GetObject("picErro8.Image")));
+            this.picErro8.Location = new System.Drawing.Point(156, 114);
+            this.picErro8.Name = "picErro8";
+            this.picErro8.Size = new System.Drawing.Size(113, 93);
+            this.picErro8.TabIndex = 64;
+            this.picErro8.TabStop = false;
+            this.picErro8.Visible = false;
             // 
             // picErro7
             // 
@@ -1093,6 +1084,52 @@
             this.picErro1.TabStop = false;
             this.picErro1.Visible = false;
             // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox7.BackgroundImage")));
+            this.pictureBox7.Location = new System.Drawing.Point(166, 154);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(76, 21);
+            this.pictureBox7.TabIndex = 55;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(166, 138);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(76, 35);
+            this.pictureBox6.TabIndex = 54;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(156, 45);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(86, 93);
+            this.pictureBox5.TabIndex = 53;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.Location = new System.Drawing.Point(166, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(103, 50);
+            this.pictureBox2.TabIndex = 10;
+            this.pictureBox2.TabStop = false;
+            // 
+            // picGanhou
+            // 
+            this.picGanhou.Image = ((System.Drawing.Image)(resources.GetObject("picGanhou.Image")));
+            this.picGanhou.Location = new System.Drawing.Point(349, 102);
+            this.picGanhou.Name = "picGanhou";
+            this.picGanhou.Size = new System.Drawing.Size(34, 100);
+            this.picGanhou.TabIndex = 67;
+            this.picGanhou.TabStop = false;
+            this.picGanhou.Visible = false;
+            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
@@ -1110,24 +1147,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(128, 50);
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.Location = new System.Drawing.Point(166, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(103, 50);
-            this.pictureBox2.TabIndex = 10;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox7.BackgroundImage")));
-            this.pictureBox7.Location = new System.Drawing.Point(166, 154);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(76, 21);
-            this.pictureBox7.TabIndex = 55;
-            this.pictureBox7.TabStop = false;
             // 
             // pictureBox4
             // 
@@ -1147,24 +1166,6 @@
             this.picGanhou2.TabIndex = 68;
             this.picGanhou2.TabStop = false;
             this.picGanhou2.Visible = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(166, 138);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(76, 35);
-            this.pictureBox6.TabIndex = 54;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(156, 45);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(86, 93);
-            this.pictureBox5.TabIndex = 53;
-            this.pictureBox5.TabStop = false;
             // 
             // gifMorto
             // 
@@ -1200,6 +1201,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(975, 575);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.ssJogo);
@@ -1215,9 +1217,8 @@
             this.ssJogo.PerformLayout();
             this.tbForca.ResumeLayout(false);
             this.tbForca.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picErro8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox0)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picGanhou)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picErro8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picErro7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picErro6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picErro3)).EndInit();
@@ -1226,14 +1227,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.picErro2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAuxErro1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picErro1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picGanhou2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picGanhou)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picGanhou2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gifMorto)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
