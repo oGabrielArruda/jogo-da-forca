@@ -52,11 +52,13 @@
     <Compile Include="frmForca.Designer.cs">
       <DependentUpon>frmForca.cs</DependentUpon>
     </Compile>
+    <Compile Include="IRegisto.cs" />
+    <Compile Include="IVetorDados.cs" />
     <Compile Include="Jogador.cs" />
     <Compile Include="PalavraDica.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="VetorPalavra.cs" />
+    <Compile Include="VetorDados.cs" />
     <EmbeddedResource Include="frmForca.resx">
       <DependentUpon>frmForca.cs</DependentUpon>
     </EmbeddedResource>

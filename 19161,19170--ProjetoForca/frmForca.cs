@@ -15,12 +15,12 @@ namespace _19161_19170__ProjetoForca
 {
     public partial class Forca : Form
     {
-        VetorPalavra vetor; 
+        VetorDados<PalavraDica> vetor; 
 
         public Forca()
         {
             InitializeComponent();
-            vetor = new VetorPalavra(100); // instanciamos o vetor
+            vetor = new VetorDados<PalavraDica>(100); // instanciamos o vetor
         }
 
         private void Form1_Load(object sender, EventArgs e)
