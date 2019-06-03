@@ -37,3 +37,13 @@ C:\Users\u19170\Desktop\projt\ProjetoForca\19161,19170--ProjetoForca\obj\Debug\a
 C:\Users\u19170\Desktop\projt\ProjetoForca\19161,19170--ProjetoForca\obj\Debug\19161,19170--ProjetoForca.exe
 C:\Users\u19170\Desktop\projt\ProjetoForca\19161,19170--ProjetoForca\obj\Debug\19161,19170--ProjetoForca.pdb
 C:\Users\u19170\Desktop\projt\ProjetoForca\19161,19170--ProjetoForca\obj\Debug\apProjetoForca.csprojResolveAssemblyReference.cache
+C:\Users\u19170\Desktop\poj\ProjetoForca\19161,19170--ProjetoForca\bin\Debug\19161,19170--ProjetoForca.exe.config
+C:\Users\u19170\Desktop\poj\ProjetoForca\19161,19170--ProjetoForca\bin\Debug\19161,19170--ProjetoForca.exe
+C:\Users\u19170\Desktop\poj\ProjetoForca\19161,19170--ProjetoForca\bin\Debug\19161,19170--ProjetoForca.pdb
+C:\Users\u19170\Desktop\poj\ProjetoForca\19161,19170--ProjetoForca\obj\Debug\apProjetoForca.csprojResolveAssemblyReference.cache
+C:\Users\u19170\Desktop\poj\ProjetoForca\19161,19170--ProjetoForca\obj\Debug\_19161_19170__ProjetoForca.Forca.resources
+C:\Users\u19170\Desktop\poj\ProjetoForca\19161,19170--ProjetoForca\obj\Debug\_19161_19170__ProjetoForca.Properties.Resources.resources
+C:\Users\u19170\Desktop\poj\ProjetoForca\19161,19170--ProjetoForca\obj\Debug\apProjetoForca.csproj.GenerateResource.Cache
+C:\Users\u19170\Desktop\poj\ProjetoForca\19161,19170--ProjetoForca\obj\Debug\apProjetoForca.csproj.CoreCompileInputs.cache
+C:\Users\u19170\Desktop\poj\ProjetoForca\19161,19170--ProjetoForca\obj\Debug\19161,19170--ProjetoForca.exe
+C:\Users\u19170\Desktop\poj\ProjetoForca\19161,19170--ProjetoForca\obj\Debug\19161,19170--ProjetoForca.pdb

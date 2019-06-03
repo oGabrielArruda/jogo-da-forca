@@ -1,4 +1,2 @@
 Nome            Pontos
-gabriel         10
-angelao         5
-angelo          9
+fafa            11

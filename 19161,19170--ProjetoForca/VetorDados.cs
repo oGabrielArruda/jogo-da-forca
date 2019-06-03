@@ -115,12 +115,12 @@ class VetorDados<Registro>: IVetorDados<Registro> where
             return resultado;
         }
 
-        public void AcessarPalavraEDica(int nmrLinha, ref string palavraAcessada, ref string dicaAcessada)
-        {
+       /* public void AcessarPalavraEDica(int nmrLinha, ref string palavraAcessada, ref string dicaAcessada)
+        {      
             PalavraDica acessado = dados[nmrLinha]; // acessa o objeto que está no vetor do número que foi sorteado
             palavraAcessada = acessado.PalavraUsada; // devolve para o programa a palavra e a dica do objeto sorteado
-            dicaAcessada = acessado.DicaUsada;
-        }
+            dicaAcessada = acessado.DicaUsada; 
+        } */
 
         int qtosCaracteres = 0;
 

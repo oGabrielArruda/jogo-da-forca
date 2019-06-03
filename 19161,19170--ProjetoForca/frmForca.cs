@@ -113,8 +113,11 @@ namespace _19161_19170__ProjetoForca
         {                                                          // rodada
             Random sorteioNmr = new Random();
             int nmrLinha = sorteioNmr.Next(100);      // sorteia um número entre 0 e 99
-            vetor.AcessarPalavraEDica(nmrLinha, ref palavra, ref dica); // chama o método que acessa a palavra e a dica que entrarão
-        }                                                               // na rodada. Ambas strings são devolvidas para o método
+            PalavraDica oSorteado = new PalavraDica();
+            oSorteado = vetor[nmrLinha];
+            palavra = oSorteado.PalavraUsada;
+            dica = oSorteado.DicaUsada;
+        }                                                               
 
         void IniciarJogo(string palavra, string dica) 
         {
