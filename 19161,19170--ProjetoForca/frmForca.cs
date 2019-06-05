@@ -25,6 +25,13 @@ namespace _19161_19170__ProjetoForca
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            int indice = 0;
+            barraDeFerramentas.ImageList = imlBotoes;
+            foreach (ToolStripItem item in barraDeFerramentas.Items)
+                if (item is ToolStripButton) // se não é separador:
+                    (item as ToolStripButton).ImageIndex = indice++;
+
+
             tmrAgora.Start(); // incia o timer do horário do dia
             dlgAbrir.Title = "Escolha o arquivo texto para o jogo"; // título do OpenFileDialog
             if (dlgAbrir.ShowDialog() == DialogResult.OK) // se abriu o arquivo
@@ -374,9 +381,6 @@ namespace _19161_19170__ProjetoForca
             lbHorario.Text = "Horário: " + DateTime.Now.ToString("hh:mm:ss"); // exibe o horário
         }
 
-
-
-
         void ImagensGanhou() //exibimos as imagens da vitória
         {
             picErro1.Visible = true;
@@ -392,6 +396,151 @@ namespace _19161_19170__ProjetoForca
 
             this.Refresh(); // atualizamos o form para exibir as imagens
             Application.DoEvents();
+        }
+
+        //////////////////////////////////////////// --- Manutenção de dados --- /////////////////////////////////////////////////////////
+        int ondeIncluir = -1;
+        void AtualizarTela()
+        {
+            if (!vetor.EstaVazio)
+            {
+                int indice = vetor.PosicaoAtual;
+                txtPalavra.Text = vetor[indice].PalavraUsada;
+                txtDica.Text = vetor[indice].DicaUsada;
+            }
+            TestarBotoes();
+        }
+
+        private void TestarBotoes()
+        {
+            btnInicio.Enabled = true;
+            btnAnterior.Enabled = true;
+            btnProximo.Enabled = true;
+            btnUltimo.Enabled = true;
+            if (vetor.EstaNoInicio)
+            {
+                btnInicio.Enabled = false;
+                btnAnterior.Enabled = false;
+            }
+            if (vetor.EstaNoFim)
+            {
+                btnProximo.Enabled = false;
+                btnUltimo.Enabled = false;
+            }
+        }
+
+        private void Limpar()
+        {
+            txtPalavra.Clear();
+            txtDica.Clear();
+        }
+
+        private void btnInicio_Click(object sender, EventArgs e)
+        {
+            vetor.PosicionarNoPrimeiro();
+            AtualizarTela();
+        }
+
+
+        private void btnAnterior_Click(object sender, EventArgs e)
+        {
+            vetor.RetrocederPosicao();
+            AtualizarTela();
+        }
+
+        private void btnProximo_Click(object sender, EventArgs e)
+        {
+            vetor.AvancarPosicao();
+            AtualizarTela();
+        }
+
+        private void btnProcurar_Click(object sender, EventArgs e)
+        {
+            if (!vetor.EstaVazio)
+            {
+                vetor.SituacaoAtual = Situacao.pesquisando;
+                txtPalavra.ReadOnly = false;
+                Limpar();
+                txtPalavra.Focus();
+                stlbMensagem.Text = "Digite a palavra procurada";
+
+            }
+        }
+
+        private void btnNovo_Click(object sender, EventArgs e)
+        {
+            Limpar();
+            vetor.SituacaoAtual = Situacao.incluindo;
+            txtPalavra.ReadOnly = false;
+            txtDica.ReadOnly = false;
+            txtPalavra.Focus();
+            stlbMensagem.Text = "Digite a palavra e a dica nova";
+        }
+
+        private void btnUltimo_Click(object sender, EventArgs e)
+        {
+            vetor.PosicionarNoUltimo();
+            AtualizarTela();
+        }
+
+        private void txtPalavra_Leave(object sender, EventArgs e)
+        {
+            if (vetor.SituacaoAtual == Situacao.pesquisando)
+            {
+                if (!vetor.EstaVazio)
+                {
+                    int indice = -1;
+                    var procurado = new PalavraDica(txtPalavra.Text.ToLower(), "");
+                    if (vetor.Existe(procurado, ref indice))
+                    {
+                        vetor.PosicaoAtual = indice;
+                        AtualizarTela();
+                    }
+                    else
+                    {
+                        MessageBox.Show("A palavra pesquisada não existe no jogo");
+                        vetor.PosicionarNoPrimeiro();
+                        AtualizarTela();
+                    }
+                    txtPalavra.ReadOnly = true;
+                    vetor.SituacaoAtual = Situacao.navegando;
+                }
+                else
+                    MessageBox.Show("Não há nenhuma palavra no jogo!\nAbra um arquivo ou as adicione!");
+            }
+
+         else
+            if (vetor.SituacaoAtual == Situacao.incluindo)
+            {
+                PalavraDica novaPalavra = new PalavraDica(txtPalavra.Text.ToLower(), "");
+                if(vetor.Existe(novaPalavra, ref ondeIncluir))
+                {
+                    MessageBox.Show("Palavra repetida, inclusão cancelada");
+                    Limpar();
+                    vetor.SituacaoAtual = Situacao.navegando;
+                    txtPalavra.ReadOnly = true;
+                    txtDica.ReadOnly = true;
+                }
+                else
+                {
+                    stlbMensagem.Text = "Digite os outros campos, após isso pressione [Salvar]";
+                    txtDica.Focus();
+                }
+            }
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            if(vetor.SituacaoAtual == Situacao.incluindo)
+            {
+                var novoDesafio = new PalavraDica(txtPalavra.Text.ToLower(), txtDica.Text);
+                vetor.Incluir(novoDesafio, ondeIncluir);
+                vetor.PosicaoAtual = ondeIncluir;
+                AtualizarTela();
+                vetor.SituacaoAtual = Situacao.navegando;
+                txtPalavra.ReadOnly = true;
+                txtDica.ReadOnly = true;
+            }
         }
     }
 }
