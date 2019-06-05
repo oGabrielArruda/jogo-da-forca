@@ -38,7 +38,7 @@ namespace _19161_19170__ProjetoForca
             {
                 vetor.LerDados(dlgAbrir.FileName); // lemos os dados na classe vetor passando como parâmetro o nome do arquivo aberto
             }
-                
+            vetor.Ordenar();              
         }
 
         private void btnIniciar_Click(object sender, EventArgs e)
@@ -495,6 +495,7 @@ namespace _19161_19170__ProjetoForca
                     {
                         vetor.PosicaoAtual = indice;
                         AtualizarTela();
+                        stlbMensagem.Text = "Palavra encontrada na posição" + indice;
                     }
                     else
                     {

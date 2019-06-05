@@ -45,9 +45,9 @@ namespace _19161_19170__ProjetoForca
         {
 
         }
-        public int CompareTo(PalavraDica outra)
+        public int CompareTo(PalavraDica outra) //método CompareTo
         {
-            return palavraUsada.CompareTo(outra.PalavraUsada);
+             return palavraUsada.Trim().CompareTo(outra.palavraUsada.Trim());
         }
 
         public String ParaArquivo()

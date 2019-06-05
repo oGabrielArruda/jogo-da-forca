@@ -128,6 +128,13 @@ namespace _19161_19170__ProjetoForca
             this.gifMorto = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tbCadastro = new System.Windows.Forms.TabPage();
+            this.txtDica = new System.Windows.Forms.TextBox();
+            this.txtPalavra = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ssMensagem = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.stlbMensagem = new System.Windows.Forms.ToolStripStatusLabel();
             this.barraDeFerramentas = new System.Windows.Forms.ToolStrip();
             this.btnInicio = new System.Windows.Forms.ToolStripButton();
             this.btnAnterior = new System.Windows.Forms.ToolStripButton();
@@ -144,14 +151,7 @@ namespace _19161_19170__ProjetoForca
             this.btnExcluir = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.btnSair = new System.Windows.Forms.ToolStripButton();
-            this.ssMensagem = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.stlbMensagem = new System.Windows.Forms.ToolStripStatusLabel();
             this.imlBotoes = new System.Windows.Forms.ImageList(this.components);
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtPalavra = new System.Windows.Forms.TextBox();
-            this.txtDica = new System.Windows.Forms.TextBox();
             lbqualNome = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPalavra)).BeginInit();
             this.panelTeclado.SuspendLayout();
@@ -179,8 +179,8 @@ namespace _19161_19170__ProjetoForca
             ((System.ComponentModel.ISupportInitialize)(this.gifMorto)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tbCadastro.SuspendLayout();
-            this.barraDeFerramentas.SuspendLayout();
             this.ssMensagem.SuspendLayout();
+            this.barraDeFerramentas.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbqualNome
@@ -1230,6 +1230,72 @@ namespace _19161_19170__ProjetoForca
             this.tbCadastro.Text = "Cadastro";
             this.tbCadastro.UseVisualStyleBackColor = true;
             // 
+            // txtDica
+            // 
+            this.txtDica.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDica.Location = new System.Drawing.Point(319, 152);
+            this.txtDica.Name = "txtDica";
+            this.txtDica.ReadOnly = true;
+            this.txtDica.Size = new System.Drawing.Size(443, 35);
+            this.txtDica.TabIndex = 7;
+            // 
+            // txtPalavra
+            // 
+            this.txtPalavra.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPalavra.Location = new System.Drawing.Point(319, 88);
+            this.txtPalavra.Name = "txtPalavra";
+            this.txtPalavra.ReadOnly = true;
+            this.txtPalavra.Size = new System.Drawing.Size(274, 35);
+            this.txtPalavra.TabIndex = 6;
+            this.txtPalavra.Leave += new System.EventHandler(this.txtPalavra_Leave);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(235, 152);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(67, 29);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Dica:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(203, 91);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(99, 29);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Palavra:";
+            // 
+            // ssMensagem
+            // 
+            this.ssMensagem.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.ssMensagem.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1,
+            this.stlbMensagem});
+            this.ssMensagem.Location = new System.Drawing.Point(3, 497);
+            this.ssMensagem.Name = "ssMensagem";
+            this.ssMensagem.Size = new System.Drawing.Size(949, 22);
+            this.ssMensagem.TabIndex = 3;
+            this.ssMensagem.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.ForeColor = System.Drawing.Color.White;
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(69, 17);
+            this.toolStripStatusLabel1.Text = "Mensagem:";
+            // 
+            // stlbMensagem
+            // 
+            this.stlbMensagem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.stlbMensagem.ForeColor = System.Drawing.Color.White;
+            this.stlbMensagem.Name = "stlbMensagem";
+            this.stlbMensagem.Size = new System.Drawing.Size(56, 17);
+            this.stlbMensagem.Text = "Bom dia!";
+            // 
             // barraDeFerramentas
             // 
             this.barraDeFerramentas.BackColor = System.Drawing.Color.Silver;
@@ -1405,33 +1471,6 @@ namespace _19161_19170__ProjetoForca
             this.btnSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnSair.ToolTipText = "Termina o programa";
             // 
-            // ssMensagem
-            // 
-            this.ssMensagem.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.ssMensagem.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1,
-            this.stlbMensagem});
-            this.ssMensagem.Location = new System.Drawing.Point(3, 497);
-            this.ssMensagem.Name = "ssMensagem";
-            this.ssMensagem.Size = new System.Drawing.Size(949, 22);
-            this.ssMensagem.TabIndex = 3;
-            this.ssMensagem.Text = "statusStrip1";
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.ForeColor = System.Drawing.Color.White;
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(69, 17);
-            this.toolStripStatusLabel1.Text = "Mensagem:";
-            // 
-            // stlbMensagem
-            // 
-            this.stlbMensagem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.stlbMensagem.ForeColor = System.Drawing.Color.White;
-            this.stlbMensagem.Name = "stlbMensagem";
-            this.stlbMensagem.Size = new System.Drawing.Size(56, 17);
-            this.stlbMensagem.Text = "Bom dia!";
-            // 
             // imlBotoes
             // 
             this.imlBotoes.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imlBotoes.ImageStream")));
@@ -1454,45 +1493,6 @@ namespace _19161_19170__ProjetoForca
             this.imlBotoes.Images.SetKeyName(15, "PRINTER5.BMP");
             this.imlBotoes.Images.SetKeyName(16, "WINNEXT.BMP");
             this.imlBotoes.Images.SetKeyName(17, "WINPREV.BMP");
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(203, 91);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 29);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Palavra:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(235, 152);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 29);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Dica:";
-            // 
-            // txtPalavra
-            // 
-            this.txtPalavra.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPalavra.Location = new System.Drawing.Point(319, 88);
-            this.txtPalavra.Name = "txtPalavra";
-            this.txtPalavra.ReadOnly = true;
-            this.txtPalavra.Size = new System.Drawing.Size(274, 35);
-            this.txtPalavra.TabIndex = 6;
-            this.txtPalavra.Leave += new System.EventHandler(this.txtPalavra_Leave);
-            // 
-            // txtDica
-            // 
-            this.txtDica.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDica.Location = new System.Drawing.Point(319, 152);
-            this.txtDica.Name = "txtDica";
-            this.txtDica.ReadOnly = true;
-            this.txtDica.Size = new System.Drawing.Size(274, 35);
-            this.txtDica.TabIndex = 7;
             // 
             // Forca
             // 
@@ -1537,10 +1537,10 @@ namespace _19161_19170__ProjetoForca
             this.tabControl1.ResumeLayout(false);
             this.tbCadastro.ResumeLayout(false);
             this.tbCadastro.PerformLayout();
-            this.barraDeFerramentas.ResumeLayout(false);
-            this.barraDeFerramentas.PerformLayout();
             this.ssMensagem.ResumeLayout(false);
             this.ssMensagem.PerformLayout();
+            this.barraDeFerramentas.ResumeLayout(false);
+            this.barraDeFerramentas.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
