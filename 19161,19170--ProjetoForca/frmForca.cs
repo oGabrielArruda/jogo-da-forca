@@ -495,7 +495,7 @@ namespace _19161_19170__ProjetoForca
                     {
                         vetor.PosicaoAtual = indice;
                         AtualizarTela();
-                        stlbMensagem.Text = "Palavra encontrada na posição" + indice;
+                        stlbMensagem.Text = "Palavra encontrada na posição " + indice;
                     }
                     else
                     {
@@ -525,9 +525,45 @@ namespace _19161_19170__ProjetoForca
                 else
                 {
                     stlbMensagem.Text = "Digite os outros campos, após isso pressione [Salvar]";
+                    btnSalvar.Enabled = true;
                     txtDica.Focus();
                 }
             }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            vetor.SituacaoAtual = Situacao.navegando;
+            AtualizarTela();
+            btnSalvar.Enabled = false;
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Deseja excluir esse registro?", "Exclusão", MessageBoxButtons.YesNo, 
+                MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                vetor.Excluir(vetor.PosicaoAtual);
+                if (vetor.PosicaoAtual > vetor.Tamanho)
+                    vetor.PosicionarNoUltimo();
+                AtualizarTela();
+                 
+            }
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void Forca_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            vetor.GravarDados(dlgAbrir.FileName);
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
@@ -539,6 +575,7 @@ namespace _19161_19170__ProjetoForca
                 vetor.PosicaoAtual = ondeIncluir;
                 AtualizarTela();
                 vetor.SituacaoAtual = Situacao.navegando;
+                btnSalvar.Enabled = false;
                 txtPalavra.ReadOnly = true;
                 txtDica.ReadOnly = true;
             }

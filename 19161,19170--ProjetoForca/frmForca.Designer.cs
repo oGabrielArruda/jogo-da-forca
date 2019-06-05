@@ -1234,6 +1234,7 @@ namespace _19161_19170__ProjetoForca
             // 
             this.txtDica.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDica.Location = new System.Drawing.Point(319, 152);
+            this.txtDica.MaxLength = 30;
             this.txtDica.Name = "txtDica";
             this.txtDica.ReadOnly = true;
             this.txtDica.Size = new System.Drawing.Size(443, 35);
@@ -1243,6 +1244,7 @@ namespace _19161_19170__ProjetoForca
             // 
             this.txtPalavra.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPalavra.Location = new System.Drawing.Point(319, 88);
+            this.txtPalavra.MaxLength = 15;
             this.txtPalavra.Name = "txtPalavra";
             this.txtPalavra.ReadOnly = true;
             this.txtPalavra.Size = new System.Drawing.Size(274, 35);
@@ -1414,6 +1416,7 @@ namespace _19161_19170__ProjetoForca
             this.btnEditar.Text = "Editar";
             this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnEditar.ToolTipText = "Permite alterar os dados do registro atual";
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnCancelar
             // 
@@ -1425,6 +1428,7 @@ namespace _19161_19170__ProjetoForca
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnCancelar.ToolTipText = "Cancela a operação atual";
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnSalvar
             // 
@@ -1454,6 +1458,7 @@ namespace _19161_19170__ProjetoForca
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnExcluir.ToolTipText = "Exclui o registro exibido na tela";
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // toolStripSeparator4
             // 
@@ -1470,6 +1475,7 @@ namespace _19161_19170__ProjetoForca
             this.btnSair.Text = "Sair";
             this.btnSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnSair.ToolTipText = "Termina o programa";
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // imlBotoes
             // 
@@ -1506,6 +1512,7 @@ namespace _19161_19170__ProjetoForca
             this.MinimumSize = new System.Drawing.Size(960, 569);
             this.Name = "Forca";
             this.Text = "Jogo da forca";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Forca_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Click += new System.EventHandler(this.btnClick);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPalavra)).EndInit();
