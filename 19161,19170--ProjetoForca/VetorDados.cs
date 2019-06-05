@@ -99,7 +99,7 @@ class VetorDados<Registro>: IVetorDados<Registro> where
         {
             var arquivo = new StreamWriter(nomeArquivo);        // abre arquivo para escrita
             for (int indice = 0; indice < qtsDados; indice++)  // percorre elementos do vetor
-                arquivo.WriteLine($"{dados[indice],5}");       // grava cada elemento
+                arquivo.Write(dados[indice]);       // grava cada elemento
             arquivo.Close();
         }
         public override string ToString()  // retorna lista de valores separados por 

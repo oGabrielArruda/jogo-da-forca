@@ -558,12 +558,16 @@ namespace _19161_19170__ProjetoForca
 
         private void Forca_FormClosing(object sender, FormClosingEventArgs e)
         {
-            vetor.GravarDados(dlgAbrir.FileName);
+            //vetor.GravarDados(dlgAbrir.FileName);
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-
+            vetor.SituacaoAtual = Situacao.editando;
+            txtPalavra.ReadOnly = false;
+            txtDica.ReadOnly = false;
+            btnSalvar.Enabled = true;
+            stlbMensagem.Text = "Edite os campos desejados e pressione [Salvar]";
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
@@ -575,10 +579,17 @@ namespace _19161_19170__ProjetoForca
                 vetor.PosicaoAtual = ondeIncluir;
                 AtualizarTela();
                 vetor.SituacaoAtual = Situacao.navegando;
-                btnSalvar.Enabled = false;
-                txtPalavra.ReadOnly = true;
-                txtDica.ReadOnly = true;
             }
+            else
+                if(vetor.SituacaoAtual == Situacao.editando)
+                {
+                     vetor[vetor.PosicaoAtual] = new PalavraDica(txtPalavra.Text.ToLower(), txtDica.Text);
+                     vetor.SituacaoAtual = Situacao.navegando;
+                     AtualizarTela();
+                }
+            btnSalvar.Enabled = false;
+            txtPalavra.ReadOnly = true;
+            txtDica.ReadOnly = true;
         }
     }
 }
