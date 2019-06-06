@@ -52,7 +52,7 @@ namespace _19161_19170__ProjetoForca
 
         public String ParaArquivo()
         {
-            return palavraUsada + "" + dicaUsada;
+            return palavraUsada.PadRight(15, ' ') + dicaUsada.PadRight(100,' ');
         }
     }
 }

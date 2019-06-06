@@ -38,7 +38,7 @@ namespace _19161_19170__ProjetoForca
             {
                 vetor.LerDados(dlgAbrir.FileName); // lemos os dados na classe vetor passando como parâmetro o nome do arquivo aberto
             }
-            vetor.Ordenar();              
+            vetor.Ordenar();
         }
 
         private void btnIniciar_Click(object sender, EventArgs e)
@@ -405,8 +405,8 @@ namespace _19161_19170__ProjetoForca
             if (!vetor.EstaVazio)
             {
                 int indice = vetor.PosicaoAtual;
-                txtPalavra.Text = vetor[indice].PalavraUsada;
-                txtDica.Text = vetor[indice].DicaUsada;
+                txtPalavra.Text = vetor[indice].PalavraUsada.Trim();
+                txtDica.Text = vetor[indice].DicaUsada.Trim();
             }
             TestarBotoes();
         }
@@ -433,6 +433,67 @@ namespace _19161_19170__ProjetoForca
         {
             txtPalavra.Clear();
             txtDica.Clear();
+        }
+
+        private void Forca_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            vetor.GravarDados(dlgAbrir.FileName);
+        }
+
+        private void tbCadastro_Enter(object sender, EventArgs e)
+        {
+            if (!vetor.EstaVazio)
+            {
+                vetor.PosicionarNoPrimeiro();
+                AtualizarTela();
+            }
+        }
+        private void txtPalavra_Leave(object sender, EventArgs e)
+        {
+            if (vetor.SituacaoAtual == Situacao.pesquisando)
+            {
+                if (!vetor.EstaVazio)
+                {
+                    int indice = -1;
+                    var procurado = new PalavraDica(txtPalavra.Text.ToLower(), "");
+                    if (vetor.Existe(procurado, ref indice))
+                    {
+                        vetor.PosicaoAtual = indice;
+                        AtualizarTela();
+                        stlbMensagem.Text = "Palavra encontrada na posição " + indice;
+                    }
+                    else
+                    {
+                        MessageBox.Show("A palavra pesquisada não existe no jogo");
+                        vetor.PosicionarNoPrimeiro();
+                        AtualizarTela();
+                    }
+                    txtPalavra.ReadOnly = true;
+                    vetor.SituacaoAtual = Situacao.navegando;
+                }
+                else
+                    MessageBox.Show("Não há nenhuma palavra no jogo!\nAbra um arquivo ou as adicione!");
+            }
+
+         else
+            if (vetor.SituacaoAtual == Situacao.incluindo)
+            {
+                PalavraDica novaPalavra = new PalavraDica(txtPalavra.Text.ToLower(), "");
+                if(vetor.Existe(novaPalavra, ref ondeIncluir))
+                {
+                    MessageBox.Show("Palavra repetida, inclusão cancelada");
+                    Limpar();
+                    vetor.SituacaoAtual = Situacao.navegando;
+                    txtPalavra.ReadOnly = true;
+                    txtDica.ReadOnly = true;
+                }
+                else
+                {
+                    stlbMensagem.Text = "Digite os outros campos, após isso pressione [Salvar]";
+                    btnSalvar.Enabled = true;
+                    txtDica.Focus();
+                }
+            }
         }
 
         private void btnInicio_Click(object sender, EventArgs e)
@@ -483,53 +544,11 @@ namespace _19161_19170__ProjetoForca
             AtualizarTela();
         }
 
-        private void txtPalavra_Leave(object sender, EventArgs e)
+        private void btnSair_Click(object sender, EventArgs e)
         {
-            if (vetor.SituacaoAtual == Situacao.pesquisando)
-            {
-                if (!vetor.EstaVazio)
-                {
-                    int indice = -1;
-                    var procurado = new PalavraDica(txtPalavra.Text.ToLower(), "");
-                    if (vetor.Existe(procurado, ref indice))
-                    {
-                        vetor.PosicaoAtual = indice;
-                        AtualizarTela();
-                        stlbMensagem.Text = "Palavra encontrada na posição " + indice;
-                    }
-                    else
-                    {
-                        MessageBox.Show("A palavra pesquisada não existe no jogo");
-                        vetor.PosicionarNoPrimeiro();
-                        AtualizarTela();
-                    }
-                    txtPalavra.ReadOnly = true;
-                    vetor.SituacaoAtual = Situacao.navegando;
-                }
-                else
-                    MessageBox.Show("Não há nenhuma palavra no jogo!\nAbra um arquivo ou as adicione!");
-            }
-
-         else
-            if (vetor.SituacaoAtual == Situacao.incluindo)
-            {
-                PalavraDica novaPalavra = new PalavraDica(txtPalavra.Text.ToLower(), "");
-                if(vetor.Existe(novaPalavra, ref ondeIncluir))
-                {
-                    MessageBox.Show("Palavra repetida, inclusão cancelada");
-                    Limpar();
-                    vetor.SituacaoAtual = Situacao.navegando;
-                    txtPalavra.ReadOnly = true;
-                    txtDica.ReadOnly = true;
-                }
-                else
-                {
-                    stlbMensagem.Text = "Digite os outros campos, após isso pressione [Salvar]";
-                    btnSalvar.Enabled = true;
-                    txtDica.Focus();
-                }
-            }
+            Close();
         }
+
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
@@ -540,25 +559,15 @@ namespace _19161_19170__ProjetoForca
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Deseja excluir esse registro?", "Exclusão", MessageBoxButtons.YesNo, 
+            if (MessageBox.Show("Deseja excluir esse registro?", "Exclusão", MessageBoxButtons.YesNo,
                 MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 vetor.Excluir(vetor.PosicaoAtual);
                 if (vetor.PosicaoAtual > vetor.Tamanho)
                     vetor.PosicionarNoUltimo();
                 AtualizarTela();
-                 
+
             }
-        }
-
-        private void btnSair_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void Forca_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            //vetor.GravarDados(dlgAbrir.FileName);
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -574,19 +583,22 @@ namespace _19161_19170__ProjetoForca
         {
             if(vetor.SituacaoAtual == Situacao.incluindo)
             {
-                var novoDesafio = new PalavraDica(txtPalavra.Text.ToLower(), txtDica.Text);
-                vetor.Incluir(novoDesafio, ondeIncluir);
-                vetor.PosicaoAtual = ondeIncluir;
-                AtualizarTela();
-                vetor.SituacaoAtual = Situacao.navegando;
+                if (txtDica.Text != "")
+                {
+                    var novoDesafio = new PalavraDica(txtPalavra.Text.ToLower().PadRight(15, ' '), txtDica.Text.PadRight(100, ' '));
+                    vetor.Incluir(novoDesafio, ondeIncluir);
+                    vetor.PosicaoAtual = ondeIncluir;
+                }
+                else
+                    MessageBox.Show("Digite uma dica para sua palavra!");
             }
             else
                 if(vetor.SituacaoAtual == Situacao.editando)
                 {
-                     vetor[vetor.PosicaoAtual] = new PalavraDica(txtPalavra.Text.ToLower(), txtDica.Text);
-                     vetor.SituacaoAtual = Situacao.navegando;
-                     AtualizarTela();
+                     vetor[vetor.PosicaoAtual] = new PalavraDica(txtPalavra.Text.ToLower().PadRight(15,' '), txtDica.Text.PadRight(100, ' '));
                 }
+            AtualizarTela();
+            vetor.SituacaoAtual = Situacao.navegando;
             btnSalvar.Enabled = false;
             txtPalavra.ReadOnly = true;
             txtDica.ReadOnly = true;

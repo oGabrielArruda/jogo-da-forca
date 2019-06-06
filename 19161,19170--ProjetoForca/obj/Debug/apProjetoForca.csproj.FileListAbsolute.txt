@@ -57,3 +57,13 @@ C:\Users\u19170\Desktop\proj\ProjetoForca\19161,19170--ProjetoForca\obj\Debug\ap
 C:\Users\u19170\Desktop\proj\ProjetoForca\19161,19170--ProjetoForca\obj\Debug\apProjetoForca.csproj.CoreCompileInputs.cache
 C:\Users\u19170\Desktop\proj\ProjetoForca\19161,19170--ProjetoForca\obj\Debug\19161,19170--ProjetoForca.exe
 C:\Users\u19170\Desktop\proj\ProjetoForca\19161,19170--ProjetoForca\obj\Debug\19161,19170--ProjetoForca.pdb
+C:\Users\Gabripol\Desktop\pro\ProjetoForca\19161,19170--ProjetoForca\bin\Debug\19161,19170--ProjetoForca.exe.config
+C:\Users\Gabripol\Desktop\pro\ProjetoForca\19161,19170--ProjetoForca\bin\Debug\19161,19170--ProjetoForca.exe
+C:\Users\Gabripol\Desktop\pro\ProjetoForca\19161,19170--ProjetoForca\bin\Debug\19161,19170--ProjetoForca.pdb
+C:\Users\Gabripol\Desktop\pro\ProjetoForca\19161,19170--ProjetoForca\obj\Debug\apProjetoForca.csprojAssemblyReference.cache
+C:\Users\Gabripol\Desktop\pro\ProjetoForca\19161,19170--ProjetoForca\obj\Debug\_19161_19170__ProjetoForca.Forca.resources
+C:\Users\Gabripol\Desktop\pro\ProjetoForca\19161,19170--ProjetoForca\obj\Debug\_19161_19170__ProjetoForca.Properties.Resources.resources
+C:\Users\Gabripol\Desktop\pro\ProjetoForca\19161,19170--ProjetoForca\obj\Debug\apProjetoForca.csproj.GenerateResource.cache
+C:\Users\Gabripol\Desktop\pro\ProjetoForca\19161,19170--ProjetoForca\obj\Debug\apProjetoForca.csproj.CoreCompileInputs.cache
+C:\Users\Gabripol\Desktop\pro\ProjetoForca\19161,19170--ProjetoForca\obj\Debug\19161,19170--ProjetoForca.exe
+C:\Users\Gabripol\Desktop\pro\ProjetoForca\19161,19170--ProjetoForca\obj\Debug\19161,19170--ProjetoForca.pdb

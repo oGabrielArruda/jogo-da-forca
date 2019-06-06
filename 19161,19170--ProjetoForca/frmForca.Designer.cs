@@ -202,11 +202,11 @@ namespace _19161_19170__ProjetoForca
             // lbForca
             // 
             this.lbForca.AutoSize = true;
-            this.lbForca.Font = new System.Drawing.Font("Curlz MT", 70F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbForca.Font = new System.Drawing.Font("Microsoft Sans Serif", 70F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbForca.ForeColor = System.Drawing.Color.DarkCyan;
             this.lbForca.Location = new System.Drawing.Point(601, 13);
             this.lbForca.Name = "lbForca";
-            this.lbForca.Size = new System.Drawing.Size(268, 125);
+            this.lbForca.Size = new System.Drawing.Size(310, 107);
             this.lbForca.TabIndex = 0;
             this.lbForca.Text = "Forca!";
             // 
@@ -1229,15 +1229,16 @@ namespace _19161_19170__ProjetoForca
             this.tbCadastro.TabIndex = 1;
             this.tbCadastro.Text = "Cadastro";
             this.tbCadastro.UseVisualStyleBackColor = true;
+            this.tbCadastro.Enter += new System.EventHandler(this.tbCadastro_Enter);
             // 
             // txtDica
             // 
             this.txtDica.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDica.Location = new System.Drawing.Point(319, 152);
-            this.txtDica.MaxLength = 30;
+            this.txtDica.Location = new System.Drawing.Point(137, 152);
+            this.txtDica.MaxLength = 100;
             this.txtDica.Name = "txtDica";
             this.txtDica.ReadOnly = true;
-            this.txtDica.Size = new System.Drawing.Size(443, 35);
+            this.txtDica.Size = new System.Drawing.Size(752, 35);
             this.txtDica.TabIndex = 7;
             // 
             // txtPalavra
@@ -1255,7 +1256,7 @@ namespace _19161_19170__ProjetoForca
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(235, 152);
+            this.label2.Location = new System.Drawing.Point(49, 158);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 29);
             this.label2.TabIndex = 5;
