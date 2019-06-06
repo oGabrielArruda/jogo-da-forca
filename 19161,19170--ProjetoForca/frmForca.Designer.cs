@@ -128,6 +128,7 @@ namespace _19161_19170__ProjetoForca
             this.gifMorto = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tbCadastro = new System.Windows.Forms.TabPage();
+            this.label3 = new System.Windows.Forms.Label();
             this.txtDica = new System.Windows.Forms.TextBox();
             this.txtPalavra = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -1216,6 +1217,8 @@ namespace _19161_19170__ProjetoForca
             // 
             // tbCadastro
             // 
+            this.tbCadastro.BackColor = System.Drawing.Color.NavajoWhite;
+            this.tbCadastro.Controls.Add(this.label3);
             this.tbCadastro.Controls.Add(this.txtDica);
             this.tbCadastro.Controls.Add(this.txtPalavra);
             this.tbCadastro.Controls.Add(this.label2);
@@ -1228,13 +1231,22 @@ namespace _19161_19170__ProjetoForca
             this.tbCadastro.Size = new System.Drawing.Size(955, 522);
             this.tbCadastro.TabIndex = 1;
             this.tbCadastro.Text = "Cadastro";
-            this.tbCadastro.UseVisualStyleBackColor = true;
             this.tbCadastro.Enter += new System.EventHandler(this.tbCadastro_Enter);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Modern No. 20", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(290, 76);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(340, 34);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Manutenção dos Desafios";
             // 
             // txtDica
             // 
             this.txtDica.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDica.Location = new System.Drawing.Point(137, 152);
+            this.txtDica.Location = new System.Drawing.Point(149, 271);
             this.txtDica.MaxLength = 100;
             this.txtDica.Name = "txtDica";
             this.txtDica.ReadOnly = true;
@@ -1244,7 +1256,7 @@ namespace _19161_19170__ProjetoForca
             // txtPalavra
             // 
             this.txtPalavra.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPalavra.Location = new System.Drawing.Point(319, 88);
+            this.txtPalavra.Location = new System.Drawing.Point(149, 187);
             this.txtPalavra.MaxLength = 15;
             this.txtPalavra.Name = "txtPalavra";
             this.txtPalavra.ReadOnly = true;
@@ -1256,7 +1268,7 @@ namespace _19161_19170__ProjetoForca
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(49, 158);
+            this.label2.Location = new System.Drawing.Point(61, 277);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 29);
             this.label2.TabIndex = 5;
@@ -1266,7 +1278,7 @@ namespace _19161_19170__ProjetoForca
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(203, 91);
+            this.label1.Location = new System.Drawing.Point(29, 193);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(99, 29);
             this.label1.TabIndex = 4;
@@ -1675,6 +1687,7 @@ namespace _19161_19170__ProjetoForca
         private System.Windows.Forms.TextBox txtPalavra;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
     }
 }
 

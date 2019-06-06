@@ -1,6 +1,6 @@
 acarajé        Comida tipimente baiana                                                                             
 alan turing    Pai da ciência da computação                                                                        
-amarelinha     Jogo de pular em uma e em duas pernas, usa-se normalmente um giz                                    
+amarelinha     Jogo de pular em uma e em duas pernas                                                               
 barack obama   44° presidente dos estados unidos                                                                   
 barney         Dinossauro roxo de série infantil                                                                   
 batman         Inimigo do Coringa                                                                                  
@@ -35,7 +35,7 @@ freddie mercuryVocalista da banda Queen
 george orwell  Escritor de 1984                                                                                    
 girafa         Animal de pescoço longo                                                                             
 goku           Personagem principal do anime Dragon Ball Z                                                         
-grande família Programa de TV brasileiro que ficou mais de 10 anos no ar                                           
+grande família Programa de TV brasileiro                                                                           
 grinch         Odeia o natal                                                                                       
 hamlet         Obra de literatura clássica inglesa                                                                 
 harrison ford  Indiana Jones e Han Solo                                                                            

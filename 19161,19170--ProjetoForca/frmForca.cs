@@ -579,6 +579,7 @@ namespace _19161_19170__ProjetoForca
             stlbMensagem.Text = "Edite os campos desejados e pressione [Salvar]";
         }
 
+
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             if(vetor.SituacaoAtual == Situacao.incluindo)

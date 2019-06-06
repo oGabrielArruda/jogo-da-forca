@@ -8,23 +8,24 @@ using System.Windows.Forms;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 
-public enum Situacao
+public enum Situacao // para atribuir as funcionalidades de acordo com a situação
 {
     navegando, pesquisando, incluindo, editando, excluindo
 }
 class VetorDados<Registro>: IVetorDados<Registro> where
-        Registro : IComparable<Registro>, IRegistro, new()
+        Registro : IComparable<Registro>, IRegistro, new() // a classe vetor dados com base no Registro deve seguir as
+                                                          // interfaces IVetorDados, IRegistro, e deve ter um método de comparação
     {
         int tamanhoMaximo;  // tamanho físico do vetor dados
         int qtsDados;      // tamanho lógico do vetor dados
-        Situacao situacaoAtual;
+        Situacao situacaoAtual; 
         int posicaoAtual;
-        private Registro[] dados;
+        private Registro[] dados; // vetor dados do objeto genérico registro
          string[] vetorCaracteres = new string[15];
 
         public VetorDados(int tamanhoDesejado)
         {
-            dados = new Registro[tamanhoDesejado];
+            dados = new Registro[tamanhoDesejado]; // instanciamos o vetor
             qtsDados = 0;
             tamanhoMaximo = tamanhoDesejado;
         }
@@ -160,7 +161,7 @@ class VetorDados<Registro>: IVetorDados<Registro> where
     {
         get => qtsDados;
     }
-    public int PosicaoAtual
+    public int PosicaoAtual // retorna quakl indíce está sendo exibido na tela de manutenção
     {
         get => posicaoAtual;
         set
@@ -169,7 +170,7 @@ class VetorDados<Registro>: IVetorDados<Registro> where
                 posicaoAtual = value;
         }
     }
-    public Registro this[int indice]
+    public Registro this[int indice] // retorna o valor do vetor no registro passado como parâmetro
     {
         get
         {
@@ -213,7 +214,7 @@ class VetorDados<Registro>: IVetorDados<Registro> where
     }
 
     // insere o novo dado na posição indicada por ondeIncluir
-    public void Incluir(Registro valorAInserir, int ondeIncluir)
+    public void Incluir(Registro valorAInserir, int ondeIncluir) // inclui o objeto passado como parâmetro na posição desejada
     {
         if (qtsDados >= dados.Length)
             ExpandirVetor();
@@ -226,7 +227,7 @@ class VetorDados<Registro>: IVetorDados<Registro> where
         qtsDados++;
     }
 
-    public bool Existe(Registro procurado, ref int onde) // Pesquisa binária
+    public bool Existe(Registro procurado, ref int onde) // Vê se existe o objeto passado como parâmetro e devolve o índice em que ele foi encontrado
     {
         bool achou = false;
         int inicio = 0;
@@ -280,7 +281,7 @@ class VetorDados<Registro>: IVetorDados<Registro> where
     public void ExibirDados(DataGridView lista)
     {
     }
-    public Situacao SituacaoAtual
+    public Situacao SituacaoAtual // atributo público para a situação atual
         {
             get => situacaoAtual;
             set => situacaoAtual = value;
@@ -290,36 +291,36 @@ class VetorDados<Registro>: IVetorDados<Registro> where
             get => qtsDados <= 0; // se qtosDados <= 0, retorna true
         }
 
-        public void PosicionarNoPrimeiro()
+        public void PosicionarNoPrimeiro() // determjna a poisção atual no primeiro
         {
             if (!EstaVazio)
                 posicaoAtual = 0; // primeiro elemento do vetor
             else
                 posicaoAtual = -1; // antes do início do vetor
         }
-        public void PosicionarNoUltimo()
-        {
+        public void PosicionarNoUltimo() // determjna a poisção atual no último
+    {
             if (!EstaVazio)
                 posicaoAtual = qtsDados - 1; // última posição usada do vetor
             else
                 posicaoAtual = -1; // indica antes do vetor vazio
         }
-        public void AvancarPosicao()
+        public void AvancarPosicao() // avança 1 na posição atual
         {
             if (!EstaNoFim)
                 posicaoAtual++;
         }
-        public void RetrocederPosicao()
+        public void RetrocederPosicao() // subtrai 1 da posição atual
         {
             if (!EstaNoInicio)
                 posicaoAtual--;
         }
-        public bool EstaNoInicio
+        public bool EstaNoInicio // retorna true se a posição atual estiver no primeiro índice
         {
             get => posicaoAtual <= 0; // primeiro índice
         }
-        public bool EstaNoFim
-        {
+        public bool EstaNoFim // retorna true se a posição atual estiver no último índice
+    {
             get => posicaoAtual >= qtsDados - 1; // último índice
         }
     }

@@ -1,0 +1,3 @@
+Nome            Pontos
+gabriel         14
+joao            5
