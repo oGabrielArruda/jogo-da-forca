@@ -119,7 +119,7 @@ namespace _19161_19170__ProjetoForca
         void AcessarDesafio(ref string palavra, ref string dica)   //Método que acessará o desafio e devolverá a palavra e a dica da
         {                                                          // rodada
             Random sorteioNmr = new Random();
-            int nmrLinha = sorteioNmr.Next(100);      // sorteia um número entre 0 e 99
+            int nmrLinha = sorteioNmr.Next(vetor.Tamanho);      // sorteia um número entre as palavras no vetor de palavras
             PalavraDica oSorteado = new PalavraDica();
             oSorteado = vetor[nmrLinha];
             palavra = oSorteado.PalavraUsada;
