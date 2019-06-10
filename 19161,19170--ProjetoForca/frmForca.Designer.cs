@@ -128,7 +128,6 @@ namespace _19161_19170__ProjetoForca
             this.gifMorto = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tbCadastro = new System.Windows.Forms.TabPage();
-            this.label3 = new System.Windows.Forms.Label();
             this.txtDica = new System.Windows.Forms.TextBox();
             this.txtPalavra = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -153,6 +152,10 @@ namespace _19161_19170__ProjetoForca
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.btnSair = new System.Windows.Forms.ToolStripButton();
             this.imlBotoes = new System.Windows.Forms.ImageList(this.components);
+            this.dgvDados = new System.Windows.Forms.DataGridView();
+            this.Posicao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Palavra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Dica = new System.Windows.Forms.DataGridViewTextBoxColumn();
             lbqualNome = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPalavra)).BeginInit();
             this.panelTeclado.SuspendLayout();
@@ -182,6 +185,7 @@ namespace _19161_19170__ProjetoForca
             this.tbCadastro.SuspendLayout();
             this.ssMensagem.SuspendLayout();
             this.barraDeFerramentas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).BeginInit();
             this.SuspendLayout();
             // 
             // lbqualNome
@@ -1218,7 +1222,7 @@ namespace _19161_19170__ProjetoForca
             // tbCadastro
             // 
             this.tbCadastro.BackColor = System.Drawing.Color.NavajoWhite;
-            this.tbCadastro.Controls.Add(this.label3);
+            this.tbCadastro.Controls.Add(this.dgvDados);
             this.tbCadastro.Controls.Add(this.txtDica);
             this.tbCadastro.Controls.Add(this.txtPalavra);
             this.tbCadastro.Controls.Add(this.label2);
@@ -1233,20 +1237,10 @@ namespace _19161_19170__ProjetoForca
             this.tbCadastro.Text = "Cadastro";
             this.tbCadastro.Enter += new System.EventHandler(this.tbCadastro_Enter);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Modern No. 20", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(290, 76);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(340, 34);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Manutenção dos Desafios";
-            // 
             // txtDica
             // 
             this.txtDica.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDica.Location = new System.Drawing.Point(149, 271);
+            this.txtDica.Location = new System.Drawing.Point(124, 103);
             this.txtDica.MaxLength = 100;
             this.txtDica.Name = "txtDica";
             this.txtDica.ReadOnly = true;
@@ -1256,7 +1250,7 @@ namespace _19161_19170__ProjetoForca
             // txtPalavra
             // 
             this.txtPalavra.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPalavra.Location = new System.Drawing.Point(149, 187);
+            this.txtPalavra.Location = new System.Drawing.Point(124, 53);
             this.txtPalavra.MaxLength = 15;
             this.txtPalavra.Name = "txtPalavra";
             this.txtPalavra.ReadOnly = true;
@@ -1268,7 +1262,7 @@ namespace _19161_19170__ProjetoForca
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(61, 277);
+            this.label2.Location = new System.Drawing.Point(19, 93);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 29);
             this.label2.TabIndex = 5;
@@ -1278,7 +1272,7 @@ namespace _19161_19170__ProjetoForca
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(29, 193);
+            this.label1.Location = new System.Drawing.Point(19, 53);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(99, 29);
             this.label1.TabIndex = 4;
@@ -1513,6 +1507,38 @@ namespace _19161_19170__ProjetoForca
             this.imlBotoes.Images.SetKeyName(16, "WINNEXT.BMP");
             this.imlBotoes.Images.SetKeyName(17, "WINPREV.BMP");
             // 
+            // dgvDados
+            // 
+            this.dgvDados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Posicao,
+            this.Palavra,
+            this.Dica});
+            this.dgvDados.Location = new System.Drawing.Point(46, 177);
+            this.dgvDados.Name = "dgvDados";
+            this.dgvDados.Size = new System.Drawing.Size(849, 301);
+            this.dgvDados.TabIndex = 8;
+            // 
+            // Posicao
+            // 
+            this.Posicao.HeaderText = "Posição";
+            this.Posicao.Name = "Posicao";
+            this.Posicao.ReadOnly = true;
+            // 
+            // Palavra
+            // 
+            this.Palavra.HeaderText = "Palavra";
+            this.Palavra.Name = "Palavra";
+            this.Palavra.ReadOnly = true;
+            this.Palavra.Width = 200;
+            // 
+            // Dica
+            // 
+            this.Dica.HeaderText = "Dica";
+            this.Dica.Name = "Dica";
+            this.Dica.ReadOnly = true;
+            this.Dica.Width = 500;
+            // 
             // Forca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1561,6 +1587,7 @@ namespace _19161_19170__ProjetoForca
             this.ssMensagem.PerformLayout();
             this.barraDeFerramentas.ResumeLayout(false);
             this.barraDeFerramentas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1687,7 +1714,10 @@ namespace _19161_19170__ProjetoForca
         private System.Windows.Forms.TextBox txtPalavra;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridView dgvDados;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Posicao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Palavra;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Dica;
     }
 }
 

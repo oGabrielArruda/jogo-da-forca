@@ -408,9 +408,30 @@ namespace _19161_19170__ProjetoForca
                 txtPalavra.Text = vetor[indice].PalavraUsada.Trim();
                 txtDica.Text = vetor[indice].DicaUsada.Trim();
             }
+            MudarDgv();
             TestarBotoes();
+            vetor.SituacaoAtual = Situacao.navegando;
         }
 
+        private void MudarDgv()
+        {
+            dgvDados.RowCount = vetor.Tamanho; // a qtd de linhas é igual a qtd de palavras
+            for (int i = 0; i < dgvDados.RowCount; i++) // enquanto 'i' for menor que a qtd de linhas
+            {
+                dgvDados.Rows[i].Cells[0].Value = i; // coluna posição
+                dgvDados.Rows[i].Cells[1].Value = vetor[i].PalavraUsada; // coluna de palavras
+                dgvDados.Rows[i].Cells[2].Value = vetor[i].DicaUsada; // coluna de dicas
+            }
+        }
+        private void tbCadastro_Enter(object sender, EventArgs e)
+        {
+            if (!vetor.EstaVazio)
+            {
+                vetor.PosicionarNoPrimeiro();
+                AtualizarTela();
+            }
+            MudarDgv();        
+        }
         private void TestarBotoes()
         {
             btnInicio.Enabled = true;
@@ -439,15 +460,6 @@ namespace _19161_19170__ProjetoForca
         {
             vetor.GravarDados(dlgAbrir.FileName);
         }
-
-        private void tbCadastro_Enter(object sender, EventArgs e)
-        {
-            if (!vetor.EstaVazio)
-            {
-                vetor.PosicionarNoPrimeiro();
-                AtualizarTela();
-            }
-        }
         private void txtPalavra_Leave(object sender, EventArgs e)
         {
             if (vetor.SituacaoAtual == Situacao.pesquisando)
@@ -468,8 +480,7 @@ namespace _19161_19170__ProjetoForca
                         vetor.PosicionarNoPrimeiro();
                         AtualizarTela();
                     }
-                    txtPalavra.ReadOnly = true;
-                    vetor.SituacaoAtual = Situacao.navegando;
+                    txtPalavra.ReadOnly = true;                    
                 }
                 else
                     MessageBox.Show("Não há nenhuma palavra no jogo!\nAbra um arquivo ou as adicione!");
@@ -562,6 +573,7 @@ namespace _19161_19170__ProjetoForca
             if (MessageBox.Show("Deseja excluir esse registro?", "Exclusão", MessageBoxButtons.YesNo,
                 MessageBoxIcon.Warning) == DialogResult.Yes)
             {
+                vetor.SituacaoAtual = Situacao.excluindo;
                 vetor.Excluir(vetor.PosicaoAtual);
                 if (vetor.PosicaoAtual > vetor.Tamanho)
                     vetor.PosicionarNoUltimo();
@@ -578,7 +590,6 @@ namespace _19161_19170__ProjetoForca
             btnSalvar.Enabled = true;
             stlbMensagem.Text = "Edite os campos desejados e pressione [Salvar]";
         }
-
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
@@ -599,7 +610,6 @@ namespace _19161_19170__ProjetoForca
                      vetor[vetor.PosicaoAtual] = new PalavraDica(txtPalavra.Text.ToLower().PadRight(15,' '), txtDica.Text.PadRight(100, ' '));
                 }
             AtualizarTela();
-            vetor.SituacaoAtual = Situacao.navegando;
             btnSalvar.Enabled = false;
             txtPalavra.ReadOnly = true;
             txtDica.ReadOnly = true;
