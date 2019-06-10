@@ -400,17 +400,17 @@ namespace _19161_19170__ProjetoForca
 
         //////////////////////////////////////////// --- Manutenção de dados --- /////////////////////////////////////////////////////////
         int ondeIncluir = -1;
-        void AtualizarTela()
+        void AtualizarTela() //método de exibição
         {
-            if (!vetor.EstaVazio)
+            if (!vetor.EstaVazio) //se o vetor não está vazio
             {
-                int indice = vetor.PosicaoAtual;
-                txtPalavra.Text = vetor[indice].PalavraUsada.Trim();
-                txtDica.Text = vetor[indice].DicaUsada.Trim();
+                int indice = vetor.PosicaoAtual; // pegamos a posição atual
+                txtPalavra.Text = vetor[indice].PalavraUsada.Trim(); // alteramos os campos de exibição
+                txtDica.Text = vetor[indice].DicaUsada.Trim(); 
             }
-            MudarDgv();
-            TestarBotoes();
-            vetor.SituacaoAtual = Situacao.navegando;
+            MudarDgv(); // alteramos o datagridview
+            TestarBotoes(); // verificamos os botões
+            vetor.SituacaoAtual = Situacao.navegando; // voltamos a situação atual para a inicial, 'navegando'
         }
 
         private void MudarDgv()
@@ -425,14 +425,14 @@ namespace _19161_19170__ProjetoForca
         }
         private void tbCadastro_Enter(object sender, EventArgs e)
         {
-            if (!vetor.EstaVazio)
+            if (!vetor.EstaVazio) //se o vetor não está vazio
             {
-                vetor.PosicionarNoPrimeiro();
-                AtualizarTela();
+                vetor.PosicionarNoPrimeiro(); // posicionamos no primeiro
+                AtualizarTela(); // exibimos na tela
             }
-            MudarDgv();        
+            MudarDgv(); // exibimos no datagridview
         }
-        private void TestarBotoes()
+        private void TestarBotoes() // testamos os botões de acordo com as posições
         {
             btnInicio.Enabled = true;
             btnAnterior.Enabled = true;
@@ -460,23 +460,24 @@ namespace _19161_19170__ProjetoForca
         {
             vetor.GravarDados(dlgAbrir.FileName);
         }
-        private void txtPalavra_Leave(object sender, EventArgs e)
+        private void txtPalavra_Leave(object sender, EventArgs e) //quando saímos do campo de palavra
         {
-            if (vetor.SituacaoAtual == Situacao.pesquisando)
+            if (vetor.SituacaoAtual == Situacao.pesquisando) // se está em uma pesquisa
             {
-                if (!vetor.EstaVazio)
+                if (!vetor.EstaVazio) // se não está vazio
                 {
+                    // procuramos a palavra digitada
                     int indice = -1;
-                    var procurado = new PalavraDica(txtPalavra.Text.ToLower(), "");
-                    if (vetor.Existe(procurado, ref indice))
+                    var procurado = new PalavraDica(txtPalavra.Text.ToLower(), ""); 
+                    if (vetor.Existe(procurado, ref indice)) // se existe
                     {
-                        vetor.PosicaoAtual = indice;
-                        AtualizarTela();
-                        stlbMensagem.Text = "Palavra encontrada na posição " + indice;
+                        vetor.PosicaoAtual = indice; // colocamos a posição atual na posição que foi encontrado
+                        AtualizarTela(); // atualizamos a tela
+                        stlbMensagem.Text = "Palavra encontrada na posição " + indice; // mudamos a tela exibida
                     }
                     else
                     {
-                        MessageBox.Show("A palavra pesquisada não existe no jogo");
+                        MessageBox.Show("A palavra pesquisada não existe no jogo"); // falamos que a palavra procurada não existe
                         vetor.PosicionarNoPrimeiro();
                         AtualizarTela();
                     }
@@ -487,10 +488,10 @@ namespace _19161_19170__ProjetoForca
             }
 
          else
-            if (vetor.SituacaoAtual == Situacao.incluindo)
+            if (vetor.SituacaoAtual == Situacao.incluindo) // se é uma inclusão
             {
-                PalavraDica novaPalavra = new PalavraDica(txtPalavra.Text.ToLower(), "");
-                if(vetor.Existe(novaPalavra, ref ondeIncluir))
+                PalavraDica novaPalavra = new PalavraDica(txtPalavra.Text.ToLower(), ""); 
+                if(vetor.Existe(novaPalavra, ref ondeIncluir)) // verificamos se a palavra digitada já existe
                 {
                     MessageBox.Show("Palavra repetida, inclusão cancelada");
                     Limpar();
@@ -498,7 +499,7 @@ namespace _19161_19170__ProjetoForca
                     txtPalavra.ReadOnly = true;
                     txtDica.ReadOnly = true;
                 }
-                else
+                else // se não for repetida, prosseguimos
                 {
                     stlbMensagem.Text = "Digite os outros campos, após isso pressione [Salvar]";
                     btnSalvar.Enabled = true;
@@ -557,13 +558,13 @@ namespace _19161_19170__ProjetoForca
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-            Close();
+            Close(); // fecha o formulário
         }
 
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            vetor.SituacaoAtual = Situacao.navegando;
+            vetor.SituacaoAtual = Situacao.navegando; // voltamos para a situacao navegando
             AtualizarTela();
             btnSalvar.Enabled = false;
         }
@@ -571,11 +572,11 @@ namespace _19161_19170__ProjetoForca
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Deseja excluir esse registro?", "Exclusão", MessageBoxButtons.YesNo,
-                MessageBoxIcon.Warning) == DialogResult.Yes)
+                MessageBoxIcon.Warning) == DialogResult.Yes) // perguntamos ao usuário se ele deseja excluir o registro
             {
-                vetor.SituacaoAtual = Situacao.excluindo;
-                vetor.Excluir(vetor.PosicaoAtual);
-                if (vetor.PosicaoAtual > vetor.Tamanho)
+                vetor.SituacaoAtual = Situacao.excluindo; //alteramos a situação atual
+                vetor.Excluir(vetor.PosicaoAtual); // excluimos o desafio
+                if (vetor.PosicaoAtual > vetor.Tamanho) 
                     vetor.PosicionarNoUltimo();
                 AtualizarTela();
 
@@ -584,35 +585,35 @@ namespace _19161_19170__ProjetoForca
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            vetor.SituacaoAtual = Situacao.editando;
-            txtPalavra.ReadOnly = false;
+            vetor.SituacaoAtual = Situacao.editando; // alteramos a situação atual para 'editando'
+            txtPalavra.ReadOnly = false; //alteramos o ReadOnly dos campos
             txtDica.ReadOnly = false;
-            btnSalvar.Enabled = true;
-            stlbMensagem.Text = "Edite os campos desejados e pressione [Salvar]";
+            btnSalvar.Enabled = true; // habilitamos o botão salvar
+            stlbMensagem.Text = "Edite os campos desejados e pressione [Salvar]"; // alteramos a mensagem exibida
         }
 
-        private void btnSalvar_Click(object sender, EventArgs e)
+        private void btnSalvar_Click(object sender, EventArgs e) 
         {
-            if(vetor.SituacaoAtual == Situacao.incluindo)
+            if(vetor.SituacaoAtual == Situacao.incluindo) // se for uma inclusão
             {
-                if (txtDica.Text != "")
+                if (txtDica.Text != "") //se o campo da dica não está vazio
                 {
-                    var novoDesafio = new PalavraDica(txtPalavra.Text.ToLower().PadRight(15, ' '), txtDica.Text.PadRight(100, ' '));
-                    vetor.Incluir(novoDesafio, ondeIncluir);
-                    vetor.PosicaoAtual = ondeIncluir;
+                    var novoDesafio = new PalavraDica(txtPalavra.Text.ToLower().PadRight(15, ' '), txtDica.Text.PadRight(100, ' ')); // instanciamos o novo desafio passando os campos de texto como parâmetro
+                    vetor.Incluir(novoDesafio, ondeIncluir); // incluimos o desafio
+                    vetor.PosicaoAtual = ondeIncluir; // alteramos a posição atual
                 }
                 else
                     MessageBox.Show("Digite uma dica para sua palavra!");
             }
             else
-                if(vetor.SituacaoAtual == Situacao.editando)
+                if(vetor.SituacaoAtual == Situacao.editando) //se for uma edição
                 {
-                     vetor[vetor.PosicaoAtual] = new PalavraDica(txtPalavra.Text.ToLower().PadRight(15,' '), txtDica.Text.PadRight(100, ' '));
+                     vetor[vetor.PosicaoAtual] = new PalavraDica(txtPalavra.Text.ToLower().PadRight(15,' '), txtDica.Text.PadRight(100, ' ')); // alteramos a palavra e a dica do desafio para o editado
                 }
-            AtualizarTela();
-            btnSalvar.Enabled = false;
-            txtPalavra.ReadOnly = true;
-            txtDica.ReadOnly = true;
+            AtualizarTela(); // atualizamos a tela
+            btnSalvar.Enabled = false; // desabilitamos o botão salvar
+            txtPalavra.ReadOnly = true; // deixamos o campo da palavra só pra leitura
+            txtDica.ReadOnly = true; // deixamos o campo da dica só pra leitura
         }
     }
 }
